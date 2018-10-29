@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:context="http://www.springframework.org/schema/context" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <context:property-placeholder location="${env}.properties"/>
+    <db:mysql-config name="MySQL_Configuration" host="${db.host}" port="${db.port}" user="${db.user}" password="${db.password}" database="${db.database}" doc:name="MySQL Configuration"/>
+    <batch:job name="ScheduleFileWriteFlow">
+        <batch:input>
+            <poll doc:name="Poll">
+                <fixed-frequency-scheduler frequency="${pollfrequency}"/>
+                <watermark variable="lastTransID" default-expression="0" selector="MAX" selector-expression="#[payload.transactionID]"/>
+                <db:select config-ref="MySQL_Configuration" doc:name="Database">
+                    <db:parameterized-query><![CDATA[SELECT * FROM flights_transactions WHERE transactionID > #[flowVars.lastTransID] LIMIT 100]]></db:parameterized-query>
+                </db:select>
+            </poll>
+        </batch:input>
+        <batch:process-records>
+            <batch:step name="ValidateTransactionStep">
+                <enricher source="#[message.payload]" target="#[recordVars.valid]" doc:name="Record Valid Transaction">
+                    <vm:outbound-endpoint exchange-pattern="request-response" path="validate" doc:name="Validate Transaction via VM"/>
+                </enricher>
+            </batch:step>
+            <batch:step name="WriteValidTransactionsStep" accept-expression="#[recordVars.valid]">
+                <batch:commit size="50" doc:name="Commit50Records">
+                    <dw:transform-message doc:name="Convert to CSV">
+                        <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+---
+payload]]></dw:set-payload>
+                    </dw:transform-message>
+                    <file:outbound-endpoint path="${fileoutput}" outputPattern="#[&quot;batchFile_&quot; +  java.time.LocalDateTime.now() +  &quot;.csv&quot;]" responseTimeout="10000" doc:name="Write Out File"/>
+                </batch:commit>
+            </batch:step>
+        </batch:process-records>
+    </batch:job>
+    <flow name="VMValidateFlow-ForDevOnly">
+        <vm:inbound-endpoint exchange-pattern="request-response" path="validate" doc:name="VM"/>
+        <dw:transform-message doc:name="Validate">
+            <dw:set-payload><![CDATA[%dw 1.0
+
+%output application/java
+---
+true when (  (payload.transactionID mod 4) == 0)
+	otherwise
+false]]></dw:set-payload>
+        </dw:transform-message>
+    </flow>
+</mule>

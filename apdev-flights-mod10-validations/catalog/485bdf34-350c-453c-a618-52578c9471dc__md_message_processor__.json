@@ -1,0 +1,21 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "code": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "code"
+            },
+            "airline": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "code"
+            },
+            "responseAirline": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "responseAirline"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "485bdf34-350c-453c-a618-52578c9471dc",
+    "version": "5.2.0.0"
+}

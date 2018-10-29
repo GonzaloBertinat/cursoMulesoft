@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:wmq="http://www.mulesoft.org/schema/mule/ee/wmq" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/wmq http://www.mulesoft.org/schema/mule/ee/wmq/current/mule-wmq-ee.xsd">
+    
+   
+<flow name="processVisaGiftCards">
+        <file:inbound-endpoint path="${master.fileIn}" moveToDirectory="${master.fileProcessed}" pollingFrequency="${master.pollFrequency}" responseTimeout="10000" doc:name="File"/>
+        <dw:transform-message doc:name="Consume File Stream">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload]]></dw:set-payload>
+        </dw:transform-message>
+        <set-variable variableName="recordCount" value="#[payload.size()]" doc:name="Set recordCount"/>
+        <set-variable variableName="partner" value="#[message.payload[0].partner]" doc:name="Set partner"/>
+        <choice doc:name="Choice">
+            <when expression="#[flowVars.partner == '${partner1.name}']">
+                <dw:transform-message doc:name="Partner 1 Transform" metadata:id="a699e7d5-ef6a-48ee-b592-31058c5cb1c8">
+                    <dw:input-payload/>
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((giftcard) -> {
+	balance: giftcard.amount_granted,
+	createdOn: now as :datetime,
+	number: giftcard.card_no,
+	sourceID: "MULEBANK-0949"
+} as :object {class: "com.mulesoft.training.model.Giftcard"}
+)
+]]></dw:set-payload>
+                </dw:transform-message>
+                <!-- JMS cannot transfer an Array of Giftcard objects. Need to transform the payload to a byte-array -->
+                <object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+                <jms:outbound-endpoint queue="${partner1.queue}" connector-ref="Active_MQ" doc:name="JMS" exchange-pattern="request-response"/>
+            </when>
+            <when expression="#[flowVars.partner == '${partner2.name}']">
+                <set-variable variableName="creationDate" value="#[server.dateTime]" doc:name="Set creationDate"/>
+                <dw:transform-message doc:name="Partner 2 Transform">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((giftcard) ->
+	{
+      gc_balance: giftcard.amount_granted,
+	  gc_card_number: giftcard.card_no,
+	  origin: "MULEBANK-0949",
+	  card_type: "VISA",
+	  expiration: (flowVars.creationDate + |P3M|) as :number
+	}
+)
+]]></dw:set-payload>
+                </dw:transform-message>
+                <object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+                <set-property propertyName="creationDateUnixEpoch" value="#[flowVars.creationDate.toXMLCalendar().toGregorianCalendar().getTimeInMillis()]" doc:name="Set creationDateUnixEpoch"/>
+                <jms:outbound-endpoint exchange-pattern="request-response" queue="${partner2.queue}" connector-ref="Active_MQ" doc:name="JMS"/>
+            </when>
+            <when expression="#[flowVars.partner == '${partner3.name}']">
+                <dw:transform-message doc:name="Partner 3 Transform">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((giftcard) ->
+	{
+		cardNo: giftcard.card_no,
+		amount: giftcard.amount_granted,
+		bankOriginationID: "MULEBANK-0949"			
+	}
+)
+	]]></dw:set-payload>
+                </dw:transform-message>
+                <object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+
+
+                <jms:outbound-endpoint exchange-pattern="request-response" queue="${partner3.queue}" connector-ref="Active_MQ" doc:name="JMS"/>
+            </when>
+            <otherwise>
+                <logger message="#[&quot;Unsupported partner found in file: &quot; + flowVars.originalFilename]" level="ERROR" doc:name="Logger"/>
+                <set-payload value="#[&quot;Partner: &quot; + message.payload[0].partner + &quot;.  Not transferring the file.&quot;]" mimeType="text/plain" doc:name="Set Payload"/>
+                <file:outbound-endpoint path="${master.fileWrite}" outputPattern="#[flowVars.originalFilename]-report.txt" responseTimeout="10000" doc:name="File"/>
+            </otherwise>
+        </choice>
+        <set-payload value="Processed #[flowVars.recordCount] cards for #[flowVars.partner] with Status: #[message.inboundProperties.jmsStatusMessage]" mimeType="text/plain" doc:name="Set Payload"/>
+        <set-variable variableName="datetimeFormatted" value="#[server.dateTime.format(&quot;yyyy-MM-dd-hh_mm_ss&quot;)]" doc:name="Set datetimeFormatted"/>
+        <file:outbound-endpoint path="${master.fileWrite}" outputPattern="#[flowVars.partner]-gc-report-#[flowVars.dateTimeFormatted].txt" responseTimeout="10000" doc:name="File"/>
+        <choice-exception-strategy doc:name="Choice Exception Strategy">
+            <catch-exception-strategy when="#[exception.causeMatches('com.mulesoft.weave.*')]" doc:name="DataWeave Transformation Errors">
+                <logger message="Error transforming payload: #[exception]" level="ERROR" doc:name="Logger"/>
+            </catch-exception-strategy>
+
+        </choice-exception-strategy>
+    </flow>
+
+
+</mule>

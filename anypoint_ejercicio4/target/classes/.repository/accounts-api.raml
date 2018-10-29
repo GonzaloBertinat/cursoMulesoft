@@ -1,0 +1,50 @@
+#%RAML 1.0
+version: v1
+baseUri: https://mocksvc.mulesoft.com/mocks/9c1865f4-d938-491a-8a82-132feb331377 # 
+title: Accounts API
+
+types:
+  Account: !include types/account.raml
+  AccountNoID: !include types/accountNoID.raml
+
+/accounts:        
+  get:
+      headers: 
+        Requester-ID:
+          type: string
+
+      description: Obtener todas las cuentas
+      queryParameters: 
+        name:
+          type: string
+          required: false
+          enum: 
+            - personal
+            - business
+        country:
+          type: string 
+          required: false
+      
+      responses: 
+        200:
+          body: 
+            application/xml:
+              type: Account []
+              example: !include examples/accountExample.raml
+    
+  post:
+    description: Agregar una cuenta
+    body: 
+      application/json:
+        type: AccountNoID
+        example: !include examples/accountNoIDExample.raml
+    responses: 
+      201:
+        body: 
+          application/json:
+            example:
+              message: Cuenta creada (pero no realmente)
+          
+              
+        
+        

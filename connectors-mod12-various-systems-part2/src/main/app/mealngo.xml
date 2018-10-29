@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <flow name="mealngoFlow">
+        <jms:inbound-endpoint queue="${partner2.queue}" doc:name="JMS" connector-ref="Active_MQ" exchange-pattern="request-response"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <dw:transform-message doc:name="Convert to CSV">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+---
+payload]]></dw:set-payload>
+        </dw:transform-message>
+        <ftp:outbound-endpoint host="${partner2.ftp.host}" port="${partner2.ftp.port}" path="${partner2.ftp.root}" user="${partner2.ftp.username}" password="${partner2.ftp.password}" outputPattern="MULEBANK-gc-#[message.inboundProperties.creationDateUnixEpoch].csv" responseTimeout="10000" doc:name="FTP"/>
+     	<set-property propertyName="jmsStatusMessage" value="SUCCESS" doc:name="Set Success Status"/>
+	    <catch-exception-strategy doc:name="Catch Exception Strategy">
+	            <set-property propertyName="jmsStatusMessage" value="ERROR OCCURRED WHILE PROCESSING: #[message.exception]" doc:name="Property"/>
+	    </catch-exception-strategy>
+    </flow>
+</mule>

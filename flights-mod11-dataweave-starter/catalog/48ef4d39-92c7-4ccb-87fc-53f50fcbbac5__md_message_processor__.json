@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "flightCodes": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "flightIDs"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "48ef4d39-92c7-4ccb-87fc-53f50fcbbac5",
+    "version": "5.2.0.0"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
+    <batch:job name="virgenBatch">
+        <batch:input>
+            <poll doc:name="Poll">
+                <fixed-frequency-scheduler frequency="5" timeUnit="SECONDS"/>
+                <watermark variable="lastAccountID" default-expression="0" selector="MAX" selector-expression="#[payload.accountID]"/>
+                <db:select config-ref="MySQL_Configuration" doc:name="Database">
+                    <db:parameterized-query><![CDATA[SELECT * 
+FROM accounts 
+WHERE postal = '94108' AND accountID > #[flowVars.lastAccountID]]]></db:parameterized-query>
+                </db:select>
+            </poll>
+            <dw:transform-message doc:name="Transform Message">
+                <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	Name: payload01.name,
+	BillingStreet: payload01.street,
+	BillingCity: payload01.city,
+	BillingState: payload01.state,
+	BillingPostalCode: payload01.postal,
+	BillingCountry: payload01.country
+})]]></dw:set-payload>
+            </dw:transform-message>
+        </batch:input>
+        <batch:process-records>
+            <batch:step name="Batch_Step1">
+                <enricher source="#[payload.size()&gt;0]" target="#[recordVars.exists]" doc:name="Message Enricher">
+                    <sfdc:query config-ref="Salesforce__Basic_Authentication" query="dsql:SELECT Name FROM Account WHERE Name = '#[payload.name]'" doc:name="Salesforce"/>
+                </enricher>
+                <logger level="INFO" doc:name="Logger"/>
+            </batch:step>
+            <batch:step name="Batch_Step" accept-expression="#[!recordVars.exists]">
+                <batch:commit doc:name="Batch Commit" size="10">
+                    <sfdc:create config-ref="Salesforce__Basic_Authentication" type="Account" doc:name="Salesforce">
+                        <sfdc:objects ref="#[payload]"/>
+                    </sfdc:create>
+                </batch:commit>
+                 <logger message="#['\n\n RECORD: ' + payload]" level="INFO" doc:name="Logger"/>
+            </batch:step>
+           
+        </batch:process-records>
+        <batch:on-complete>
+            <logger level="INFO" doc:name="Logger"/>
+        </batch:on-complete>
+    </batch:job>
+    <batch:job name="virgenBatch1">
+        <batch:process-records>
+            <batch:step name="Batch_Step2">
+                <batch:set-record-variable variableName="existe" value="#[payload.size()&gt;0]" doc:name="Record Variable"/>
+            </batch:step>
+        </batch:process-records>
+        <batch:on-complete>
+            <logger level="INFO" doc:name="Logger"/>
+        </batch:on-complete>
+    </batch:job>
+    <sub-flow name="virgenSub_Flow">
+        <vm:outbound-endpoint exchange-pattern="one-way" responseTimeout="" doc:name="VM"/>
+    </sub-flow>
+    <flow name="virgenFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/quiz" doc:name="HTTP"/>
+        <db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+            <db:parameterized-query><![CDATA[SELECT * 
+FROM accounts 
+WHERE postal = '94108' AND accountID > #[flowVars.lastAccountID]]]></db:parameterized-query>
+        </db:select>
+        <batch:execute name="virgenBatch1" doc:name="Batch Execute"/>
+    </flow>
+</mule>

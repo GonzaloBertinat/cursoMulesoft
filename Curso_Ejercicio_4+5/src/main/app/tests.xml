@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="9091" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration" host="0.0.0.0" port="${http.port}" doc:name="HTTP Request Configuration" basePath="/api">
+        <http:raml-api-configuration location="https://anypoint.mulesoft.com/exchange/api/v1/organizations/d92613d4-010e-48cf-87bf-e262999fa554/assets/d92613d4-010e-48cf-87bf-e262999fa554/accounts-api/1.0.1/api/root"/>
+    </http:request-config>
+    
+    <flow name="GET_Personal_Accounts-TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accounts/personal/" allowedMethods="GET" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="type" value="personal"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="GET_Business_Accounts_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accounts/business/" allowedMethods="GET" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="type" value="business"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="POST_Accounts_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accounts/post/" doc:name="HTTP" allowedMethods="GET"/>
+        <set-payload value="[
+    {
+        &quot;firstName&quot;: &quot;Rajesh&quot;,
+        &quot;lastName&quot;: &quot;Patil&quot;,
+        &quot;address&quot;: &quot;89 Nibm Road, Pune, Maharashtra&quot;,
+        &quot;postal&quot;: &quot;59141&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;miles&quot;: 36470,
+        &quot;type&quot;: &quot;personal&quot;
+    }
+]" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts" method="POST" doc:name="HTTP">
+            <http:request-builder>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="GET_Account_by_ID_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accountByID/get/" doc:name="HTTP" allowedMethods="GET"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="4401"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="PUT_Account_by_ID_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accountByID/put/" doc:name="HTTP" allowedMethods="GET"/>
+        <set-payload value=" {
+        &quot;firstName&quot;: &quot;Rajesh&quot;,
+        &quot;lastName&quot;: &quot;Patil&quot;,
+        &quot;address&quot;: &quot;89 Nibm Road, Pune, Maharashtra&quot;,
+        &quot;postal&quot;: &quot;59141&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;miles&quot;: 36470,
+        &quot;type&quot;: &quot;personal&quot;
+    }" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="PUT" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="4401"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="DELETE_Account_by_ID_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accountByID/delete/" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="DELETE" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="4401"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="PATCH_Account_by_ID_TEST">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/accountByID/patch/" doc:name="HTTP" allowedMethods="GET"/>
+        <set-payload value=" {
+        &quot;firstName&quot;: &quot;Rajesh&quot;,
+        &quot;lastName&quot;: &quot;Patil&quot;,
+        &quot;address&quot;: &quot;89 Nibm Road, Pune, Maharashtra&quot;,
+        &quot;postal&quot;: &quot;59141&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;miles&quot;: 36470,
+        &quot;type&quot;: &quot;personal&quot;
+    }" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="PATCH" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="4401"/>
+                <http:header headerName="Requester-ID" value="Gonzalito"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+</mule>

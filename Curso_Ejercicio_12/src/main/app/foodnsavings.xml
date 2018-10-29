@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    <flow name="FoodNSavings_InsertInDatabase_Flow">
+        <dw:transform-message doc:name="Transform Message" metadata:id="ef920869-187a-4022-8518-26f26e19372c">
+            <dw:input-payload mimeType="application/java"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	balance: payload01.amount_granted,
+	createdOn: now as :datetime,
+	number: payload01.card_no as :string,
+	sourceID: "MULEBANK-0949"
+} as :object {
+	class : "com.mulesoft.training.model.Giftcard"
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <foreach collection="#[payload]" doc:name="For Each">
+            <db:insert config-ref="Derby_Database_Configuration" doc:name="INSERT">
+                <db:parameterized-query><![CDATA[INSERT 
+INTO ${partner1.db.table} (number, sourceID, balance, createdOn) 
+VALUES (#[payload.number], #[payload.sourceID], #[payload.balance], #[payload.createdOn])]]></db:parameterized-query>
+            </db:insert>
+        </foreach>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>

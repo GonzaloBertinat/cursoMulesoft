@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Transacions_Web_Service_Consumer_Configurations",
+            "typeId": "GetTransactionsforFlightsResponse"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "AccountDetails_Request"
+        }
+    },
+    "id": "06c8359f-9388-4c29-891b-85b1fca0e4be",
+    "version": "5.2.0.0"
+}

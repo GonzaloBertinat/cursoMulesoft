@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:cluster="http://www.mulesoft.org/schema/mule/ee/cluster" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:context="http://www.springframework.org/schema/context" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd">
+    
+    
+    <context:property-placeholder location="transferAccounts-${env}.properties"/>
+    
+    <http:listener-config name="transferAccounts-api-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration" connectionIdleTimeout="50000"/>
+    
+    <apikit:config name="transferAccounts-api-config" raml="transferAccounts-api.raml" consoleEnabled="false" doc:name="Router"/>
+    
+    <http:request-config name="Accounts_HTTP_Request_Configuration" host="${accounts.host}" port="${accounts.port}" basePath="/api" doc:name="HTTP Request Configuration" responseTimeout="50000"/>
+    <ws:consumer-config name="Web_Service_Consumer" wsdlLocation="http://apdev-accounts-ws.cloudhub.io/api/transactions?wsdl" service="TransactionServiceService" port="TransactionServicePort" serviceAddress="http://apdev-accounts-ws.cloudhub.io/api/transactions" doc:name="Web Service Consumer"/>
+    <configuration defaultExceptionStrategy-ref="GlobalExceptionStrategy" doc:name="Configuration">
+        <http:config useTransportForUris="false"/>
+    </configuration>
+    <choice-exception-strategy name="GlobalExceptionStrategy">
+        <catch-exception-strategy when="#[exception.causedBy('com.mulesoft.weave.*')]" doc:name="DataWeave Error">
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <set-payload value="Error procesing a message transformation." doc:name="Set Payload"/>
+        </catch-exception-strategy>
+        <catch-exception-strategy when="#[exception.causedBy('java.lang.OutOfMemoryError')]" doc:name="Java OutofMemoryError">
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <set-payload value="Memory exceeded" doc:name="Set Payload"/>
+        </catch-exception-strategy>
+        <catch-exception-strategy when="#[exception.causedBy('java.io.IOException')]" doc:name="Java IO error">
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <set-payload value="Error in input or output information" doc:name="Set Payload"/>
+        </catch-exception-strategy>
+        <catch-exception-strategy when="#[exception.causedBy('java.io.InterruptedException')]" doc:name="Java InterruptedException">
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <set-payload value="Thread interrupted" doc:name="Set Payload"/>
+        </catch-exception-strategy>
+        <catch-exception-strategy doc:name="All other exceptions">
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <set-payload value="Unexpected error" doc:name="Set Payload"/>
+        </catch-exception-strategy>
+    </choice-exception-strategy>
+</mule>

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Mar 06 15:56:35 PST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0161-fdbe-ceb2-000022207d88 
+on database directory memory:/Users/marknguyen/Desktop/LabWorkspaces/connectors-mod12-various-systems-part2/training with class loader org.mule.module.launcher.MuleApplicationClassLoader[connectors-mod12-various-systems-part2]@74d3b638 
+Loaded from file:/Users/marknguyen/Desktop/LabWorkspaces/.mule/apps/connectors-mod12-various-systems-part2/lib/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_151-b12
+user.dir=/Users/marknguyen/Desktop/LabWorkspaces/connectors-mod12-various-systems-part2
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

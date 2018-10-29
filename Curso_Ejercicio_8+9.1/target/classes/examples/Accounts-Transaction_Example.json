@@ -1,0 +1,3917 @@
+{
+    "JKLS483S": [
+        {
+            "salesID": "4400Mat Siva824332017-10-21T22:54:36+0.00",
+            "id": "4400",
+            "firstName": "Mat",
+            "lastName": "Siva",
+            "address": "12345 Green, Boulder, Colorado",
+            "postal": "82433",
+            "country": "USA",
+            "creationDate": "2017-10-21T22:54:36+0.00",
+            "accountType": "business",
+            "miles": 119093,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4415Harrow Nope711742008-06-24T11:39:49+0.00",
+            "id": "4415",
+            "firstName": "Harrow",
+            "lastName": "Nope",
+            "address": "355 E Capthorne Court, Arkhab, Alexandra",
+            "postal": "71174",
+            "country": "United Kingdom",
+            "creationDate": "2008-06-24T11:39:49+0.00",
+            "accountType": "business",
+            "miles": 91326,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4420Yeti Bringer780142007-08-12T20:59:31+0.00",
+            "id": "4420",
+            "firstName": "Yeti",
+            "lastName": "Bringer",
+            "address": "1819 Bangy Boon, Bangalore, Karn Taka",
+            "postal": "78014",
+            "country": "India",
+            "creationDate": "2007-08-12T20:59:31+0.00",
+            "accountType": "business",
+            "miles": 80665,
+            "transactions": [
+                {
+                    "amount": "4298.0",
+                    "customerRef": "4420",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948616"
+                },
+                {
+                    "amount": "7642.0",
+                    "customerRef": "4420",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948716"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4424Dale Burgers398922014-11-19T20:15:23+0.00",
+            "id": "4424",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "12345 Test Rd, Gurnee, IL",
+            "postal": "39892",
+            "country": "USA",
+            "creationDate": "2014-11-19T20:15:23+0.00",
+            "accountType": "business",
+            "miles": 116410,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4429Wendy Crafts253622010-01-06T00:42:34+0.00",
+            "id": "4429",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "982 Cherry Ave, Chennai, TN",
+            "postal": "25362",
+            "country": "india",
+            "creationDate": "2010-01-06T00:42:34+0.00",
+            "accountType": "business",
+            "miles": 105774,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4436Ja Rule680012003-02-23T13:23:16+0.00",
+            "id": "4436",
+            "firstName": "Ja",
+            "lastName": "Rule",
+            "address": "123 9Th Ave, Oak City, Colorado",
+            "postal": "68001",
+            "country": "USA",
+            "creationDate": "2003-02-23T13:23:16+0.00",
+            "accountType": "business",
+            "miles": 127188,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4440Dijana Calija807282005-11-03T03:11:56+0.00",
+            "id": "4440",
+            "firstName": "Dijana",
+            "lastName": "Calija",
+            "address": "7 Gogoljeva, Beograd, Oak",
+            "postal": "80728",
+            "country": "Serbia",
+            "creationDate": "2005-11-03T03:11:56+0.00",
+            "accountType": "business",
+            "miles": 144707,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4444Sean Burger353922005-12-02T03:32:47+0.00",
+            "id": "4444",
+            "firstName": "Sean",
+            "lastName": "Burger",
+            "address": "433 Cherry Lane, San Jose, CA",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2005-12-02T03:32:47+0.00",
+            "accountType": "business",
+            "miles": 114072,
+            "transactions": [
+                {
+                    "amount": "4641.0",
+                    "customerRef": "4444",
+                    "flightID": "AMERICANEEFD30002016-02-01",
+                    "region": "EU",
+                    "transactionID": "181948537"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4449Pant Lark696952017-10-20T08:08:53+0.00",
+            "id": "4449",
+            "firstName": "Pant",
+            "lastName": "Lark",
+            "address": "2343 Xyz Lane, Somerville, VA",
+            "postal": "69695",
+            "country": "USA",
+            "creationDate": "2017-10-20T08:08:53+0.00",
+            "accountType": "business",
+            "miles": 112653,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4452Sri Burgers1588642007-06-08T13:33:22+0.00",
+            "id": "4452",
+            "firstName": "Sri",
+            "lastName": "Burgers1",
+            "address": "9998 Mountian Ave, Somerville, New Jersey",
+            "postal": "58864",
+            "country": "USA",
+            "creationDate": "2007-06-08T13:33:22+0.00",
+            "accountType": "business",
+            "miles": 64018,
+            "transactions": [
+                {
+                    "amount": "7370.0",
+                    "customerRef": "4452",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "US",
+                    "transactionID": "181948529"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4461Dj Patel466742015-04-14T05:54:54+0.00",
+            "id": "4461",
+            "firstName": "Dj",
+            "lastName": "Patel",
+            "address": "1819 Muray Rd, Boulder, Colorado",
+            "postal": "46674",
+            "country": "India",
+            "creationDate": "2015-04-14T05:54:54+0.00",
+            "accountType": "business",
+            "miles": 137294,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4465The Most Amazing Company302442016-01-11T17:31:10+0.00",
+            "id": "4465",
+            "firstName": "The",
+            "lastName": "Most Amazing Company",
+            "address": "1442 Victoria St, Hamilton, Colorado",
+            "postal": "30244",
+            "country": "New Zealand",
+            "creationDate": "2016-01-11T17:31:10+0.00",
+            "accountType": "business",
+            "miles": 42689,
+            "transactions": [
+                {
+                    "amount": "3747.0",
+                    "customerRef": "4465",
+                    "flightID": "UNITEDER95JF2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948696"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4468Blue Boat929622010-10-25T12:45:49+0.00",
+            "id": "4468",
+            "firstName": "Blue",
+            "lastName": "Boat",
+            "address": "1894 Lane Dr, Mumbai, London",
+            "postal": "92962",
+            "country": "India",
+            "creationDate": "2010-10-25T12:45:49+0.00",
+            "accountType": "business",
+            "miles": 91969,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4474Wendy Crafts398922000-09-02T18:52:39+0.00",
+            "id": "4474",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "1234 State St, Backa Palanka, telangana",
+            "postal": "39892",
+            "country": "Serbia",
+            "creationDate": "2000-09-02T18:52:39+0.00",
+            "accountType": "business",
+            "miles": 96341,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4481Nick The Baker931542010-05-21T15:18:31+0.00",
+            "id": "4481",
+            "firstName": "Nick",
+            "lastName": "The Baker",
+            "address": "1 Warren Pkwy, Peterborough, Cambs",
+            "postal": "93154",
+            "country": "United Kingdom",
+            "creationDate": "2010-05-21T15:18:31+0.00",
+            "accountType": "business",
+            "miles": 119914,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4489Dale Burgers466742012-03-07T07:00:51+0.00",
+            "id": "4489",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "12345 Street, San Francisco, CA",
+            "postal": "46674",
+            "country": "USA",
+            "creationDate": "2012-03-07T07:00:51+0.00",
+            "accountType": "business",
+            "miles": 132343,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4496Dale Burgers353922009-08-10T19:41:52+0.00",
+            "id": "4496",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "12345 Green Rd, Boulder, Color",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2009-08-10T19:41:52+0.00",
+            "accountType": "business",
+            "miles": 16603,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4505Dale Burgers729842000-01-27T19:31:36+0.00",
+            "id": "4505",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "12345 Green Rd, Boulder, Colorado",
+            "postal": "72984",
+            "country": "USA",
+            "creationDate": "2000-01-27T19:31:36+0.00",
+            "accountType": "business",
+            "miles": 51410,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4512Papy Loc581292001-06-22T02:07:40+0.00",
+            "id": "4512",
+            "firstName": "Papy",
+            "lastName": "Loc",
+            "address": "123 Hn High Way, Delhi, Delhi",
+            "postal": "58129",
+            "country": "India",
+            "creationDate": "2001-06-22T02:07:40+0.00",
+            "accountType": "business",
+            "miles": 111946,
+            "transactions": [
+                {
+                    "amount": "8959.0",
+                    "customerRef": "4512",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "EU",
+                    "transactionID": "181948559"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4517Dell Burgers295902010-01-18T10:55:39+0.00",
+            "id": "4517",
+            "firstName": "Dell",
+            "lastName": "Burgers",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "3800.0",
+                    "customerRef": "4517",
+                    "flightID": "UNITEDER45IF2015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948562"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4527Ray Lick433562008-05-09T05:06:35+0.00",
+            "id": "4527",
+            "firstName": "Ray",
+            "lastName": "Lick",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "301.0",
+                    "customerRef": "4527",
+                    "flightID": "UNITEDER45JD2015-04-11",
+                    "region": "US",
+                    "transactionID": "181948550"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4572Mike'S Place330652016-09-03T08:52:59+0.00",
+            "id": "4572",
+            "firstName": "Mike'S",
+            "lastName": "Place",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "9414.0",
+                    "customerRef": "4572",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948543"
+                },
+                {
+                    "amount": "6565.0",
+                    "customerRef": "4572",
+                    "flightID": "DELTAA123422015-07-11",
+                    "region": "US",
+                    "transactionID": "181948727"
+                },
+                {
+                    "amount": "8727.0",
+                    "customerRef": "4572",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948732"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4575Wendy Crafts353922000-07-23T20:26:45+0.00",
+            "id": "4575",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4590Rahul Lonny496602001-02-14T16:55:04+0.00",
+            "id": "4590",
+            "firstName": "Rahul",
+            "lastName": "Lonny",
+            "address": "4561 Krim St, Carmel, Madras",
+            "postal": "49660",
+            "country": "India",
+            "creationDate": "2001-02-14T16:55:04+0.00",
+            "accountType": "business",
+            "miles": 113508,
+            "transactions": [
+                {
+                    "amount": "8939.0",
+                    "customerRef": "4590",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "US",
+                    "transactionID": "181948818"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4593Ronald Nugget559302005-12-08T10:58:34+0.00",
+            "id": "4593",
+            "firstName": "Ronald",
+            "lastName": "Nugget",
+            "address": "867 Street, Apeldoorn, CA",
+            "postal": "55930",
+            "country": "USA",
+            "creationDate": "2005-12-08T10:58:34+0.00",
+            "accountType": "business",
+            "miles": 73917,
+            "transactions": [
+                {
+                    "amount": "8953.0",
+                    "customerRef": "4593",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "US",
+                    "transactionID": "181948578"
+                },
+                {
+                    "amount": "2610.0",
+                    "customerRef": "4593",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "US",
+                    "transactionID": "181948678"
+                },
+                {
+                    "amount": "9570.0",
+                    "customerRef": "4593",
+                    "flightID": "AMERICANFFEE01922016-01-20",
+                    "region": "US",
+                    "transactionID": "181948744"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4597Ja Kub152192003-10-28T07:47:45+0.00",
+            "id": "4597",
+            "firstName": "Ja",
+            "lastName": "Kub",
+            "address": "122 Whiskey, Daniels, Jack",
+            "postal": "15219",
+            "country": "USA",
+            "creationDate": "2003-10-28T07:47:45+0.00",
+            "accountType": "business",
+            "miles": 104264,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4604Video Games United581772005-07-23T04:51:15+0.00",
+            "id": "4604",
+            "firstName": "Video",
+            "lastName": "Games United",
+            "address": "867 Street, Red Wing, Red Wing",
+            "postal": "58177",
+            "country": "Minnesota",
+            "creationDate": "2005-07-23T04:51:15+0.00",
+            "accountType": "business",
+            "miles": 43216,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4610Nori Namen433562000-11-19T06:35:33+0.00",
+            "id": "4610",
+            "firstName": "Nori",
+            "lastName": "Namen",
+            "address": "8191 Newbuck, Mumbai, India",
+            "postal": "43356",
+            "country": "India",
+            "creationDate": "2000-11-19T06:35:33+0.00",
+            "accountType": "business",
+            "miles": 102649,
+            "transactions": [
+                {
+                    "amount": "4209.0",
+                    "customerRef": "4610",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "US",
+                    "transactionID": "181948771"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4615Angus Liu204622004-03-04T23:33:25+0.00",
+            "id": "4615",
+            "firstName": "Angus",
+            "lastName": "Liu",
+            "address": "1234 Red Rd, Apeldoorn, IL",
+            "postal": "20462",
+            "country": "USA",
+            "creationDate": "2004-03-04T23:33:25+0.00",
+            "accountType": "business",
+            "miles": 115055,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4618David Loco470292004-01-26T04:33:38+0.00",
+            "id": "4618",
+            "firstName": "David",
+            "lastName": "Loco",
+            "address": "1234 Green Rd, Stillwater, IL",
+            "postal": "47029",
+            "country": "USA",
+            "creationDate": "2004-01-26T04:33:38+0.00",
+            "accountType": "business",
+            "miles": 121900,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4624Jason Lee807282006-10-08T16:56:03+0.00",
+            "id": "4624",
+            "firstName": "Jason",
+            "lastName": "Lee",
+            "address": "12 Test Street, Beverly Hills, CA",
+            "postal": "80728",
+            "country": "USA",
+            "creationDate": "2006-10-08T16:56:03+0.00",
+            "accountType": "business",
+            "miles": 35144,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4629Praveen Allurai828212011-04-05T03:32:46+0.00",
+            "id": "4629",
+            "firstName": "Praveen",
+            "lastName": "Allurai",
+            "address": "1234-Bellevwe, Seattle, washington",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2011-04-05T03:32:46+0.00",
+            "accountType": "business",
+            "miles": 121882,
+            "transactions": [
+                {
+                    "amount": "8691.0",
+                    "customerRef": "4629",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "US",
+                    "transactionID": "181948498"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4633Tiger Cave696952001-03-15T23:04:53+0.00",
+            "id": "4633",
+            "firstName": "Tiger",
+            "lastName": "Cave",
+            "address": "819 Lockheart, Omr, Tamil Nadu",
+            "postal": "69695",
+            "country": "India",
+            "creationDate": "2001-03-15T23:04:53+0.00",
+            "accountType": "business",
+            "miles": 132368,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4643Jon Li929622011-04-11T09:19:53+0.00",
+            "id": "4643",
+            "firstName": "Jon",
+            "lastName": "Li",
+            "address": "181 Jon Street, Nama, Singal",
+            "postal": "92962",
+            "country": "Turkey",
+            "creationDate": "2011-04-11T09:19:53+0.00",
+            "accountType": "business",
+            "miles": 113003,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4737Kids Paradise589042011-07-16T03:51:32+0.00",
+            "id": "4737",
+            "firstName": "Kids",
+            "lastName": "Paradise",
+            "address": "1198 Peachtree, Suwanee, GA",
+            "postal": "58904",
+            "country": "USA",
+            "creationDate": "2011-07-16T03:51:32+0.00",
+            "accountType": "business",
+            "miles": 81351,
+            "transactions": [],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4490Marty Martinez154902004-05-17T04:34:31+0.00",
+            "id": "4490",
+            "firstName": "Marty",
+            "lastName": "Martinez",
+            "address": "123 Drury Lane, Chicago, IL",
+            "postal": "15490",
+            "country": "USA",
+            "creationDate": "2004-05-17T04:34:31+0.00",
+            "accountType": "business",
+            "miles": 63796,
+            "transactions": [
+                {
+                    "amount": "5457.0",
+                    "customerRef": "4490",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948600"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4520Nori Namen736112001-10-08T12:06:14+0.00",
+            "id": "4520",
+            "firstName": "Nori",
+            "lastName": "Namen",
+            "address": "112 Don Street, Inver, Southland",
+            "postal": "73611",
+            "country": "New Zealand",
+            "creationDate": "2001-10-08T12:06:14+0.00",
+            "accountType": "business",
+            "miles": 139044,
+            "transactions": [
+                {
+                    "amount": "5650.0",
+                    "customerRef": "4520",
+                    "flightID": "UNITEDER95JF2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948521"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4546John Doe286922015-01-06T07:40:04+0.00",
+            "id": "4546",
+            "firstName": "John",
+            "lastName": "Doe",
+            "address": "10Th Main, Bangalore, Karnataka",
+            "postal": "28692",
+            "country": "India",
+            "creationDate": "2015-01-06T07:40:04+0.00",
+            "accountType": "business",
+            "miles": 51698,
+            "transactions": [
+                {
+                    "amount": "3609.0",
+                    "customerRef": "4546",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948629"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4652Joe Smith545122015-12-05T08:49:42+0.00",
+            "id": "4652",
+            "firstName": "Joe",
+            "lastName": "Smith",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [
+                {
+                    "amount": "2152.0",
+                    "customerRef": "4652",
+                    "flightID": "AMERICANEEFD19942016-01-01",
+                    "region": "US",
+                    "transactionID": "181948531"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4668Li Jon756022017-01-25T13:49:13+0.00",
+            "id": "4668",
+            "firstName": "Li",
+            "lastName": "Jon",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "9630.0",
+                    "customerRef": "4668",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948762"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4678Rama Krishna581292005-11-03T12:40:55+0.00",
+            "id": "4678",
+            "firstName": "Rama",
+            "lastName": "Krishna",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "5116.0",
+                    "customerRef": "4678",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "US",
+                    "transactionID": "181948785"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4699Fred Bloggs154902004-02-14T00:03:43+0.00",
+            "id": "4699",
+            "firstName": "Fred",
+            "lastName": "Bloggs",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "3829.0",
+                    "customerRef": "4699",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948763"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4711Dell Asturt736112000-07-13T08:27:27+0.00",
+            "id": "4711",
+            "firstName": "Dell",
+            "lastName": "Asturt",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "8371.0",
+                    "customerRef": "4711",
+                    "flightID": "AMERICANFFEE20002016-02-20",
+                    "region": "US",
+                    "transactionID": "181948473"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4726Joe Smith295902010-01-18T10:55:39+0.00",
+            "id": "4726",
+            "firstName": "Joe",
+            "lastName": "Smith",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "8603.0",
+                    "customerRef": "4726",
+                    "flightID": "UNITEDER38SD2015-03-20",
+                    "region": "US",
+                    "transactionID": "181948722"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4742Li Jon433562008-05-09T05:06:35+0.00",
+            "id": "4742",
+            "firstName": "Li",
+            "lastName": "Jon",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "7611.0",
+                    "customerRef": "4742",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948450"
+                },
+                {
+                    "amount": "4573.0",
+                    "customerRef": "4742",
+                    "flightID": "UNITEDER9FJE2015-07-11",
+                    "region": "US",
+                    "transactionID": "181948482"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4772Sunday Funday330652016-09-03T08:52:59+0.00",
+            "id": "4772",
+            "firstName": "Sunday",
+            "lastName": "Funday",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "3928.0",
+                    "customerRef": "4772",
+                    "flightID": "UNITEDER45IF2015-02-11",
+                    "region": "US",
+                    "transactionID": "181948633"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4783Angus Liu353922000-07-23T20:26:45+0.00",
+            "id": "4783",
+            "firstName": "Angus",
+            "lastName": "Liu",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [
+                {
+                    "amount": "8282.0",
+                    "customerRef": "4783",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "US",
+                    "transactionID": "181948536"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4806Dale Burger Chicago589042017-12-22T11:26:41+0.00",
+            "id": "4806",
+            "firstName": "Dale",
+            "lastName": "Burger Chicago",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "7682.0",
+                    "customerRef": "4806",
+                    "flightID": "UNITEDER39RK2015-09-11",
+                    "region": "EU",
+                    "transactionID": "181948599"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4824Jamson Jamey153612013-04-18T05:11:33+0.00",
+            "id": "4824",
+            "firstName": "Jamson",
+            "lastName": "Jamey",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "1999.0",
+                    "customerRef": "4824",
+                    "flightID": "AMERICANFFEE01922016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948655"
+                },
+                {
+                    "amount": "2272.0",
+                    "customerRef": "4824",
+                    "flightID": "AMERICANFFEE20002016-02-20",
+                    "region": "US",
+                    "transactionID": "181948734"
+                },
+                {
+                    "amount": "5068.0",
+                    "customerRef": "4824",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "US",
+                    "transactionID": "181948781"
+                },
+                {
+                    "amount": "5218.0",
+                    "customerRef": "4824",
+                    "flightID": "DELTAA1ASD42015-09-11",
+                    "region": "US",
+                    "transactionID": "181948789"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4833Arjun Dale314972006-02-02T06:22:30+0.00",
+            "id": "4833",
+            "firstName": "Arjun",
+            "lastName": "Dale",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "5670.0",
+                    "customerRef": "4833",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948672"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4847David Jame828212000-08-23T13:06:36+0.00",
+            "id": "4847",
+            "firstName": "David",
+            "lastName": "Jame",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [
+                {
+                    "amount": "1613.0",
+                    "customerRef": "4847",
+                    "flightID": "DELTAA142442015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948453"
+                },
+                {
+                    "amount": "3447.0",
+                    "customerRef": "4847",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "US",
+                    "transactionID": "181948511"
+                },
+                {
+                    "amount": "9725.0",
+                    "customerRef": "4847",
+                    "flightID": "DELTAA1BTT42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948584"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4866My Burgers545122015-12-05T08:49:42+0.00",
+            "id": "4866",
+            "firstName": "My",
+            "lastName": "Burgers",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [
+                {
+                    "amount": "10017.0",
+                    "customerRef": "4866",
+                    "flightID": "UNITEDER39RK2015-09-11",
+                    "region": "US",
+                    "transactionID": "181948481"
+                },
+                {
+                    "amount": "5566.0",
+                    "customerRef": "4866",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "US",
+                    "transactionID": "181948800"
+                },
+                {
+                    "amount": "7873.0",
+                    "customerRef": "4866",
+                    "flightID": "AMERICANFFEE20002016-02-20",
+                    "region": "EU",
+                    "transactionID": "181948822"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4881Wendy Crafts756022017-01-25T13:49:13+0.00",
+            "id": "4881",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "2073.0",
+                    "customerRef": "4881",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948526"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4894Burger Brian581292005-11-03T12:40:55+0.00",
+            "id": "4894",
+            "firstName": "Burger",
+            "lastName": "Brian",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "5368.0",
+                    "customerRef": "4894",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948736"
+                },
+                {
+                    "amount": "9199.0",
+                    "customerRef": "4894",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948814"
+                },
+                {
+                    "amount": "8058.0",
+                    "customerRef": "4894",
+                    "flightID": "AMERICANRREE00012016-01-20",
+                    "region": "US",
+                    "transactionID": "181948838"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4912Sri Burgers1154902004-02-14T00:03:43+0.00",
+            "id": "4912",
+            "firstName": "Sri",
+            "lastName": "Burgers1",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "3232.0",
+                    "customerRef": "4912",
+                    "flightID": "DELTAA142442015-02-12",
+                    "region": "US",
+                    "transactionID": "181948738"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4925Daveburgers736112000-07-13T08:27:27+0.00",
+            "id": "4925",
+            "firstName": "Daveburgers",
+            "lastName": "Daveburgers",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "1477.0",
+                    "customerRef": "4925",
+                    "flightID": "DELTAA123422015-07-11",
+                    "region": "US",
+                    "transactionID": "181948761"
+                },
+                {
+                    "amount": "10168.0",
+                    "customerRef": "4925",
+                    "flightID": "AMERICANFFEE11122016-01-20",
+                    "region": "US",
+                    "transactionID": "181948790"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4942The Most Amazing Company295902010-01-18T10:55:39+0.00",
+            "id": "4942",
+            "firstName": "The",
+            "lastName": "Most Amazing Company",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "9227.0",
+                    "customerRef": "4942",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948497"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4953Dragana Calic433562008-05-09T05:06:35+0.00",
+            "id": "4953",
+            "firstName": "Dragana",
+            "lastName": "Calic",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "6326.0",
+                    "customerRef": "4953",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "EU",
+                    "transactionID": "181948617"
+                },
+                {
+                    "amount": "8454.0",
+                    "customerRef": "4953",
+                    "flightID": "AMERICANFFEE11122016-01-20",
+                    "region": "US",
+                    "transactionID": "181948658"
+                },
+                {
+                    "amount": "5062.0",
+                    "customerRef": "4953",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "EU",
+                    "transactionID": "181948686"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4976Ash Guna330652016-09-03T08:52:59+0.00",
+            "id": "4976",
+            "firstName": "Ash",
+            "lastName": "Guna",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "728.0",
+                    "customerRef": "4976",
+                    "flightID": "AMERICANFFEE01922016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948649"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        },
+        {
+            "salesID": "4982Dale Burgers353922000-07-23T20:26:45+0.00",
+            "id": "4982",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [
+                {
+                    "amount": "4625.0",
+                    "customerRef": "4982",
+                    "flightID": "UNITEDER45IF2015-02-11",
+                    "region": "US",
+                    "transactionID": "181948487"
+                }
+            ],
+            "assignedDirector": "JKLS483S"
+        }
+    ],
+    "FJSA48JD": [
+        {
+            "salesID": "4411Arjun Dale725322006-03-04T19:53:05+0.00",
+            "id": "4411",
+            "firstName": "Arjun",
+            "lastName": "Dale",
+            "address": "Capthorne Avenue, London, Harrow",
+            "postal": "72532",
+            "country": "United Kingdom",
+            "creationDate": "2006-03-04T19:53:05+0.00",
+            "accountType": "business",
+            "miles": 126689,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4416Spawn Cycles454742013-07-15T09:56:05+0.00",
+            "id": "4416",
+            "firstName": "Spawn",
+            "lastName": "Cycles",
+            "address": "4130 Chromoly, Squamish, BC",
+            "postal": "45474",
+            "country": "Canada",
+            "creationDate": "2013-07-15T09:56:05+0.00",
+            "accountType": "business",
+            "miles": 28123,
+            "transactions": [
+                {
+                    "amount": "5738.0",
+                    "customerRef": "4416",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "US",
+                    "transactionID": "181948758"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4421Nick The Shoemaker615902010-10-16T02:55:09+0.00",
+            "id": "4421",
+            "firstName": "Nick",
+            "lastName": "The Shoemaker",
+            "address": "484 High Street, Peterborough, Cambs",
+            "postal": "61590",
+            "country": "United Kingdom",
+            "creationDate": "2010-10-16T02:55:09+0.00",
+            "accountType": "business",
+            "miles": 107261,
+            "transactions": [
+                {
+                    "amount": "9941.0",
+                    "customerRef": "4421",
+                    "flightID": "DELTAA134DS2015-04-11",
+                    "region": "EU",
+                    "transactionID": "181948776"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4425Hellow World Bowl412082003-03-24T09:23:22+0.00",
+            "id": "4425",
+            "firstName": "Hellow",
+            "lastName": "World Bowl",
+            "address": "1011 Arnold Heights Dr, Vancouver, BC",
+            "postal": "41208",
+            "country": "Canada",
+            "creationDate": "2003-03-24T09:23:22+0.00",
+            "accountType": "business",
+            "miles": 28581,
+            "transactions": [
+                {
+                    "amount": "4907.0",
+                    "customerRef": "4425",
+                    "flightID": "UNITEDER45JD2015-04-11",
+                    "region": "EU",
+                    "transactionID": "181948671"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4430Robert Barath153612006-07-20T21:39:45+0.00",
+            "id": "4430",
+            "firstName": "Robert",
+            "lastName": "Barath",
+            "address": "12354 Foo Street, Boulder, Colorado",
+            "postal": "15361",
+            "country": "Murrica",
+            "creationDate": "2006-07-20T21:39:45+0.00",
+            "accountType": "business",
+            "miles": 55240,
+            "transactions": [
+                {
+                    "amount": "6409.0",
+                    "customerRef": "4430",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948685"
+                },
+                {
+                    "amount": "678.0",
+                    "customerRef": "4430",
+                    "flightID": "DELTAA1B34S2015-06-11",
+                    "region": "US",
+                    "transactionID": "181948757"
+                },
+                {
+                    "amount": "2079.0",
+                    "customerRef": "4430",
+                    "flightID": "DELTAA1QWER2015-08-11",
+                    "region": "US",
+                    "transactionID": "181948792"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4437Rule Ja191142014-03-21T14:56:25+0.00",
+            "id": "4437",
+            "firstName": "Rule",
+            "lastName": "Ja",
+            "address": "181 Brief St, Oak City, Oak",
+            "postal": "19114",
+            "country": "USA",
+            "creationDate": "2014-03-21T14:56:25+0.00",
+            "accountType": "business",
+            "miles": 127063,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4441Gileate Dale330652011-05-15T03:23:08+0.00",
+            "id": "4441",
+            "firstName": "Gileate",
+            "lastName": "Dale",
+            "address": "123 9Th Ave, Columbus, Ohio",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2011-05-15T03:23:08+0.00",
+            "accountType": "business",
+            "miles": 122237,
+            "transactions": [
+                {
+                    "amount": "4991.0",
+                    "customerRef": "4441",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948563"
+                },
+                {
+                    "amount": "3348.0",
+                    "customerRef": "4441",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948626"
+                },
+                {
+                    "amount": "8314.0",
+                    "customerRef": "4441",
+                    "flightID": "DELTAA1B34S2015-06-11",
+                    "region": "US",
+                    "transactionID": "181948755"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4445Jesse Stuff154902003-02-21T07:54:45+0.00",
+            "id": "4445",
+            "firstName": "Jesse",
+            "lastName": "Stuff",
+            "address": "59 West Elm, Lansing, MI",
+            "postal": "15490",
+            "country": "USA",
+            "creationDate": "2003-02-21T07:54:45+0.00",
+            "accountType": "business",
+            "miles": 92312,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4450MP JS412252009-11-13T00:45:15+0.00",
+            "id": "4450",
+            "firstName": "MP",
+            "lastName": "JS",
+            "address": "9998 Mountian Ave, Somerville, New Jersey",
+            "postal": "41225",
+            "country": "USA",
+            "creationDate": "2009-11-13T00:45:15+0.00",
+            "accountType": "business",
+            "miles": 72089,
+            "transactions": [
+                {
+                    "amount": "1567.0",
+                    "customerRef": "4450",
+                    "flightID": "AMERICANFFEE11122016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948597"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4457Daveburgers931542017-02-28T19:42:58+0.00",
+            "id": "4457",
+            "firstName": "Daveburgers",
+            "lastName": "Daveburgers",
+            "address": "8481 Doddanekundi, Bangalore, Karnataka",
+            "postal": "93154",
+            "country": "India",
+            "creationDate": "2017-02-28T19:42:58+0.00",
+            "accountType": "business",
+            "miles": 109346,
+            "transactions": [
+                {
+                    "amount": "3079.0",
+                    "customerRef": "4457",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "US",
+                    "transactionID": "181948513"
+                },
+                {
+                    "amount": "2017.0",
+                    "customerRef": "4457",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "US",
+                    "transactionID": "181948541"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4462Dale Burgers588642000-07-09T22:20:13+0.00",
+            "id": "4462",
+            "firstName": "Dale",
+            "lastName": "Burgers",
+            "address": "12345 Green Rd, Boulder, Colorado",
+            "postal": "58864",
+            "country": "USA",
+            "creationDate": "2000-07-09T22:20:13+0.00",
+            "accountType": "business",
+            "miles": 126039,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4466Wendy Crafts496602005-12-28T00:45:52+0.00",
+            "id": "4466",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "1234 State St, Loveland, California",
+            "postal": "49660",
+            "country": "USA",
+            "creationDate": "2005-12-28T00:45:52+0.00",
+            "accountType": "business",
+            "miles": 37575,
+            "transactions": [
+                {
+                    "amount": "6754.0",
+                    "customerRef": "4466",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948712"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4469Cdale Burgers286922001-03-19T13:21:35+0.00",
+            "id": "4469",
+            "firstName": "Cdale",
+            "lastName": "Burgers",
+            "address": "120 Red Road, Dallas, MO",
+            "postal": "28692",
+            "country": "USA",
+            "creationDate": "2001-03-19T13:21:35+0.00",
+            "accountType": "business",
+            "miles": 103579,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4475Dusica Savic412082004-11-18T10:21:28+0.00",
+            "id": "4475",
+            "firstName": "Dusica",
+            "lastName": "Savic",
+            "address": "189 Salan Ave, New York, New York",
+            "postal": "41208",
+            "country": "Serbia",
+            "creationDate": "2004-11-18T10:21:28+0.00",
+            "accountType": "business",
+            "miles": 35765,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4482Data Acumen496602010-11-26T06:23:06+0.00",
+            "id": "4482",
+            "firstName": "Data",
+            "lastName": "Acumen",
+            "address": "1 Main Street, Scottsdale, Colorado",
+            "postal": "49660",
+            "country": "USA",
+            "creationDate": "2010-11-26T06:23:06+0.00",
+            "accountType": "business",
+            "miles": 111172,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4492Yash Yosh696952017-01-08T03:33:04+0.00",
+            "id": "4492",
+            "firstName": "Yash",
+            "lastName": "Yosh",
+            "address": "45 Oak Street, Hamilton, ON",
+            "postal": "69695",
+            "country": "USA",
+            "creationDate": "2017-01-08T03:33:04+0.00",
+            "accountType": "business",
+            "miles": 53321,
+            "transactions": [
+                {
+                    "amount": "7997.0",
+                    "customerRef": "4492",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948618"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4500Sreekamalesh330652012-01-02T14:49:53+0.00",
+            "id": "4500",
+            "firstName": "Sreekamalesh",
+            "lastName": "Sreekamalesh",
+            "address": "Warren Pkwy, Frisco, Texas",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2012-01-02T14:49:53+0.00",
+            "accountType": "business",
+            "miles": 100787,
+            "transactions": [
+                {
+                    "amount": "8128.0",
+                    "customerRef": "4500",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "EU",
+                    "transactionID": "181948490"
+                },
+                {
+                    "amount": "5633.0",
+                    "customerRef": "4500",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948583"
+                },
+                {
+                    "amount": "7823.0",
+                    "customerRef": "4500",
+                    "flightID": "AMERICANRREE00012016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948828"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4509Binh No680012005-01-13T08:50:53+0.00",
+            "id": "4509",
+            "firstName": "Binh",
+            "lastName": "No",
+            "address": "1918 Bo Luc Lac, Thu Duc, Thu Duc",
+            "postal": "68001",
+            "country": "Vietnam",
+            "creationDate": "2005-01-13T08:50:53+0.00",
+            "accountType": "business",
+            "miles": 143719,
+            "transactions": [
+                {
+                    "amount": "2106.0",
+                    "customerRef": "4509",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948452"
+                },
+                {
+                    "amount": "2892.0",
+                    "customerRef": "4509",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948769"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4513Himanshu Hi545122015-12-05T08:49:42+0.00",
+            "id": "4513",
+            "firstName": "Himanshu",
+            "lastName": "Hi",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4523Bob Builder756022017-01-25T13:49:13+0.00",
+            "id": "4523",
+            "firstName": "Bob",
+            "lastName": "Builder",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "2389.0",
+                    "customerRef": "4523",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "US",
+                    "transactionID": "181948466"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4564Max Plack581292005-11-03T12:40:55+0.00",
+            "id": "4564",
+            "firstName": "Max",
+            "lastName": "Plack",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "735.0",
+                    "customerRef": "4564",
+                    "flightID": "UNITEDER38SD2015-03-20",
+                    "region": "US",
+                    "transactionID": "181948544"
+                },
+                {
+                    "amount": "8670.0",
+                    "customerRef": "4564",
+                    "flightID": "DELTAA1ASD42015-09-11",
+                    "region": "US",
+                    "transactionID": "181948570"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4573Ethan Snow154902004-02-14T00:03:43+0.00",
+            "id": "4573",
+            "firstName": "Ethan",
+            "lastName": "Snow",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "7568.0",
+                    "customerRef": "4573",
+                    "flightID": "DELTAA142442015-02-12",
+                    "region": "US",
+                    "transactionID": "181948813"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4578John Snow736112000-07-13T08:27:27+0.00",
+            "id": "4578",
+            "firstName": "John",
+            "lastName": "Snow",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "10137.0",
+                    "customerRef": "4578",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "US",
+                    "transactionID": "181948585"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4591Krish Nomore929622008-09-25T09:41:16+0.00",
+            "id": "4591",
+            "firstName": "Krish",
+            "lastName": "Nomore",
+            "address": "1234 Jims Station St, Red Wing, Telangana",
+            "postal": "92962",
+            "country": "India",
+            "creationDate": "2008-09-25T09:41:16+0.00",
+            "accountType": "business",
+            "miles": 72825,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4595Burger House909422003-02-05T22:48:52+0.00",
+            "id": "4595",
+            "firstName": "Burger",
+            "lastName": "House",
+            "address": "12 Test Street, Oxford, England",
+            "postal": "90942",
+            "country": "United Kingdom",
+            "creationDate": "2003-02-05T22:48:52+0.00",
+            "accountType": "business",
+            "miles": 78647,
+            "transactions": [
+                {
+                    "amount": "8923.0",
+                    "customerRef": "4595",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "US",
+                    "transactionID": "181948692"
+                },
+                {
+                    "amount": "6849.0",
+                    "customerRef": "4595",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "EU",
+                    "transactionID": "181948773"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4599Mike Row856132009-01-10T18:19:37+0.00",
+            "id": "4599",
+            "firstName": "Mike",
+            "lastName": "Row",
+            "address": "2071 Broughton St, Carmel, IN",
+            "postal": "85613",
+            "country": "USA",
+            "creationDate": "2009-01-10T18:19:37+0.00",
+            "accountType": "business",
+            "miles": 28981,
+            "transactions": [
+                {
+                    "amount": "1048.0",
+                    "customerRef": "4599",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948494"
+                },
+                {
+                    "amount": "7018.0",
+                    "customerRef": "4599",
+                    "flightID": "UNITEDER3KFD2015-08-11",
+                    "region": "EU",
+                    "transactionID": "181948567"
+                },
+                {
+                    "amount": "5530.0",
+                    "customerRef": "4599",
+                    "flightID": "DELTAA134DS2015-04-11",
+                    "region": "EU",
+                    "transactionID": "181948577"
+                },
+                {
+                    "amount": "3055.0",
+                    "customerRef": "4599",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948730"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4606Marty Martinez412082016-01-05T05:38:20+0.00",
+            "id": "4606",
+            "firstName": "Marty",
+            "lastName": "Martinez",
+            "address": "12 Test Street, Apeldoorn, Gelderland",
+            "postal": "41208",
+            "country": "Netherlands",
+            "creationDate": "2016-01-05T05:38:20+0.00",
+            "accountType": "business",
+            "miles": 17401,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4613Pavan Kumar756022009-11-22T17:30:08+0.00",
+            "id": "4613",
+            "firstName": "Pavan",
+            "lastName": "Kumar",
+            "address": "928 Jt Ave, Tijuana, JT2",
+            "postal": "75602",
+            "country": "Singapore",
+            "creationDate": "2009-11-22T17:30:08+0.00",
+            "accountType": "business",
+            "miles": 27610,
+            "transactions": [
+                {
+                    "amount": "7130.0",
+                    "customerRef": "4613",
+                    "flightID": "AMERICANRREE45672016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948793"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4616Dell Inns589042000-12-01T19:20:27+0.00",
+            "id": "4616",
+            "firstName": "Dell",
+            "lastName": "Inns",
+            "address": "12 Test Street, Hyderabad, colorodo",
+            "postal": "58904",
+            "country": "USA",
+            "creationDate": "2000-12-01T19:20:27+0.00",
+            "accountType": "business",
+            "miles": 89614,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4622Dell Asturt314972010-08-12T08:38:15+0.00",
+            "id": "4622",
+            "firstName": "Dell",
+            "lastName": "Asturt",
+            "address": "928 Jt Ave, Apeldoorn, India",
+            "postal": "31497",
+            "country": "United Kingdom",
+            "creationDate": "2010-08-12T08:38:15+0.00",
+            "accountType": "business",
+            "miles": 46831,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4625Dale Burger Chicago729842002-04-05T17:37:59+0.00",
+            "id": "4625",
+            "firstName": "Dale",
+            "lastName": "Burger Chicago",
+            "address": "123456 Greens Road, Hyderabad, Tamil Nadu",
+            "postal": "72984",
+            "country": "USA",
+            "creationDate": "2002-04-05T17:37:59+0.00",
+            "accountType": "business",
+            "miles": 100214,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4630Joe Smith154902004-05-17T04:34:31+0.00",
+            "id": "4630",
+            "firstName": "Joe",
+            "lastName": "Smith",
+            "address": "123 Drury Lane, Chicago, IL",
+            "postal": "15490",
+            "country": "USA",
+            "creationDate": "2004-05-17T04:34:31+0.00",
+            "accountType": "business",
+            "miles": 63796,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4634Kenny Ge736112001-10-08T12:06:14+0.00",
+            "id": "4634",
+            "firstName": "Kenny",
+            "lastName": "Ge",
+            "address": "112 Don Street, Inver, Southland",
+            "postal": "73611",
+            "country": "New Zealand",
+            "creationDate": "2001-10-08T12:06:14+0.00",
+            "accountType": "business",
+            "miles": 139044,
+            "transactions": [
+                {
+                    "amount": "2696.0",
+                    "customerRef": "4634",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "US",
+                    "transactionID": "181948622"
+                },
+                {
+                    "amount": "4749.0",
+                    "customerRef": "4634",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948663"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4647Testy Cray286922015-01-06T07:40:04+0.00",
+            "id": "4647",
+            "firstName": "Testy",
+            "lastName": "Cray",
+            "address": "10Th Main, Bangalore, Karnataka",
+            "postal": "28692",
+            "country": "India",
+            "creationDate": "2015-01-06T07:40:04+0.00",
+            "accountType": "business",
+            "miles": 51698,
+            "transactions": [],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4478Video Games United642822003-11-21T00:14:17+0.00",
+            "id": "4478",
+            "firstName": "Video",
+            "lastName": "Games United",
+            "address": "1234 Green Rd, Blouder, colorodo",
+            "postal": "64282",
+            "country": "USA",
+            "creationDate": "2003-11-21T00:14:17+0.00",
+            "accountType": "business",
+            "miles": 134600,
+            "transactions": [
+                {
+                    "amount": "353.0",
+                    "customerRef": "4478",
+                    "flightID": "AMERICANEEFD30002016-02-01",
+                    "region": "US",
+                    "transactionID": "181948527"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4502Joofi Figurafo700472015-03-06T01:05:17+0.00",
+            "id": "4502",
+            "firstName": "Joofi",
+            "lastName": "Figurafo",
+            "address": "181 Brief St, Boxerville, Grundy",
+            "postal": "70047",
+            "country": "New Zealand",
+            "creationDate": "2015-03-06T01:05:17+0.00",
+            "accountType": "business",
+            "miles": 8074,
+            "transactions": [
+                {
+                    "amount": "9876.0",
+                    "customerRef": "4502",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "EU",
+                    "transactionID": "181948489"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4533Angus Liu292742016-11-24T04:10:20+0.00",
+            "id": "4533",
+            "firstName": "Angus",
+            "lastName": "Liu",
+            "address": "181 Jon Street, Villa, Native",
+            "postal": "29274",
+            "country": "Turkey",
+            "creationDate": "2016-11-24T04:10:20+0.00",
+            "accountType": "business",
+            "miles": 113809,
+            "transactions": [
+                {
+                    "amount": "369.0",
+                    "customerRef": "4533",
+                    "flightID": "AMERICANRREE00012016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948467"
+                },
+                {
+                    "amount": "1437.0",
+                    "customerRef": "4533",
+                    "flightID": "UNITEDER9FJE2015-07-11",
+                    "region": "EU",
+                    "transactionID": "181948519"
+                },
+                {
+                    "amount": "4185.0",
+                    "customerRef": "4533",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948748"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4560Jason Lee474122003-03-09T22:13:10+0.00",
+            "id": "4560",
+            "firstName": "Jason",
+            "lastName": "Lee",
+            "address": "982 Cherry Ave, China, Telangana Nomai",
+            "postal": "47412",
+            "country": "India",
+            "creationDate": "2003-03-09T22:13:10+0.00",
+            "accountType": "business",
+            "miles": 69514,
+            "transactions": [
+                {
+                    "amount": "6380.0",
+                    "customerRef": "4560",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948560"
+                },
+                {
+                    "amount": "6462.0",
+                    "customerRef": "4560",
+                    "flightID": "AMERICANEEFD30002016-02-01",
+                    "region": "EU",
+                    "transactionID": "181948704"
+                },
+                {
+                    "amount": "5931.0",
+                    "customerRef": "4560",
+                    "flightID": "AMERICANFFEE01922016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948784"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4656Tiger Cave589042017-12-22T11:26:41+0.00",
+            "id": "4656",
+            "firstName": "Tiger",
+            "lastName": "Cave",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "7130.0",
+                    "customerRef": "4656",
+                    "flightID": "AMERICANRREE00012016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948645"
+                },
+                {
+                    "amount": "169.0",
+                    "customerRef": "4656",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948751"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4673Video Games United153612013-04-18T05:11:33+0.00",
+            "id": "4673",
+            "firstName": "Video",
+            "lastName": "Games United",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "7123.0",
+                    "customerRef": "4673",
+                    "flightID": "AMERICANEEFD30002016-02-01",
+                    "region": "EU",
+                    "transactionID": "181948514"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4683Nori Namen314972006-02-02T06:22:30+0.00",
+            "id": "4683",
+            "firstName": "Nori",
+            "lastName": "Namen",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "5752.0",
+                    "customerRef": "4683",
+                    "flightID": "DELTAA134DS2015-04-11",
+                    "region": "US",
+                    "transactionID": "181948764"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4703David Loco828212000-08-23T13:06:36+0.00",
+            "id": "4703",
+            "firstName": "David",
+            "lastName": "Loco",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [
+                {
+                    "amount": "1023.0",
+                    "customerRef": "4703",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948603"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4719Dell Namen545122015-12-05T08:49:42+0.00",
+            "id": "4719",
+            "firstName": "Dell",
+            "lastName": "Namen",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [
+                {
+                    "amount": "185.0",
+                    "customerRef": "4719",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948545"
+                },
+                {
+                    "amount": "905.0",
+                    "customerRef": "4719",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948587"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4731Tiger Cave756022017-01-25T13:49:13+0.00",
+            "id": "4731",
+            "firstName": "Tiger",
+            "lastName": "Cave",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "3864.0",
+                    "customerRef": "4731",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948601"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4754Video Games United581292005-11-03T12:40:55+0.00",
+            "id": "4754",
+            "firstName": "Video",
+            "lastName": "Games United",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "382.0",
+                    "customerRef": "4754",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "EU",
+                    "transactionID": "181948454"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4776Pavan Kumar154902004-02-14T00:03:43+0.00",
+            "id": "4776",
+            "firstName": "Pavan",
+            "lastName": "Kumar",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "3598.0",
+                    "customerRef": "4776",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "US",
+                    "transactionID": "181948470"
+                },
+                {
+                    "amount": "8537.0",
+                    "customerRef": "4776",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "US",
+                    "transactionID": "181948528"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4790David Loco736112000-07-13T08:27:27+0.00",
+            "id": "4790",
+            "firstName": "David",
+            "lastName": "Loco",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "9947.0",
+                    "customerRef": "4790",
+                    "flightID": "UNITEDER45JD2015-04-11",
+                    "region": "US",
+                    "transactionID": "181948505"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4810Dell Namen295902010-01-18T10:55:39+0.00",
+            "id": "4810",
+            "firstName": "Dell",
+            "lastName": "Namen",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "7013.0",
+                    "customerRef": "4810",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948661"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4825Tiger Cave433562008-05-09T05:06:35+0.00",
+            "id": "4825",
+            "firstName": "Tiger",
+            "lastName": "Cave",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "2603.0",
+                    "customerRef": "4825",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948602"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4842Post Spawn330652016-09-03T08:52:59+0.00",
+            "id": "4842",
+            "firstName": "Post",
+            "lastName": "Spawn",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "745.0",
+                    "customerRef": "4842",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948472"
+                },
+                {
+                    "amount": "4149.0",
+                    "customerRef": "4842",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948668"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4851Yeti Bringer353922000-07-23T20:26:45+0.00",
+            "id": "4851",
+            "firstName": "Yeti",
+            "lastName": "Bringer",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [
+                {
+                    "amount": "4114.0",
+                    "customerRef": "4851",
+                    "flightID": "AMERICANFFEE11122016-01-20",
+                    "region": "US",
+                    "transactionID": "181948775"
+                },
+                {
+                    "amount": "1814.0",
+                    "customerRef": "4851",
+                    "flightID": "DELTAA1QWER2015-08-11",
+                    "region": "EU",
+                    "transactionID": "181948821"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4870Robert Barath589042017-12-22T11:26:41+0.00",
+            "id": "4870",
+            "firstName": "Robert",
+            "lastName": "Barath",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "528.0",
+                    "customerRef": "4870",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948446"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4884Rule Ja153612013-04-18T05:11:33+0.00",
+            "id": "4884",
+            "firstName": "Rule",
+            "lastName": "Ja",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "7209.0",
+                    "customerRef": "4884",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948465"
+                },
+                {
+                    "amount": "2865.0",
+                    "customerRef": "4884",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "EU",
+                    "transactionID": "181948780"
+                },
+                {
+                    "amount": "5626.0",
+                    "customerRef": "4884",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948788"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4902Sean Burger314972006-02-02T06:22:30+0.00",
+            "id": "4902",
+            "firstName": "Sean",
+            "lastName": "Burger",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "6043.0",
+                    "customerRef": "4902",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948461"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4914Foo Baz828212000-08-23T13:06:36+0.00",
+            "id": "4914",
+            "firstName": "Foo",
+            "lastName": "Baz",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [
+                {
+                    "amount": "7574.0",
+                    "customerRef": "4914",
+                    "flightID": "AMERICANEEFD19942016-01-01",
+                    "region": "EU",
+                    "transactionID": "181948651"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4934Dj Patel545122015-12-05T08:49:42+0.00",
+            "id": "4934",
+            "firstName": "Dj",
+            "lastName": "Patel",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [
+                {
+                    "amount": "7580.0",
+                    "customerRef": "4934",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948614"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4946Blue Boat756022017-01-25T13:49:13+0.00",
+            "id": "4946",
+            "firstName": "Blue",
+            "lastName": "Boat",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "3651.0",
+                    "customerRef": "4946",
+                    "flightID": "DELTAA123422015-07-11",
+                    "region": "US",
+                    "transactionID": "181948555"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4960Dusica Savic581292005-11-03T12:40:55+0.00",
+            "id": "4960",
+            "firstName": "Dusica",
+            "lastName": "Savic",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "5578.0",
+                    "customerRef": "4960",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948551"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4977Aparna154902004-02-14T00:03:43+0.00",
+            "id": "4977",
+            "firstName": "Aparna",
+            "lastName": "Aparna",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "1013.0",
+                    "customerRef": "4977",
+                    "flightID": "UNITEDER45JD2015-04-11",
+                    "region": "EU",
+                    "transactionID": "181948787"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        },
+        {
+            "salesID": "4985SJ Denice736112000-07-13T08:27:27+0.00",
+            "id": "4985",
+            "firstName": "SJ",
+            "lastName": "Denice",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "1030.0",
+                    "customerRef": "4985",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948625"
+                }
+            ],
+            "assignedDirector": "FJSA48JD"
+        }
+    ],
+    "NMA4FJ9K": [
+        {
+            "salesID": "4412James Conway191502014-03-23T08:29:28+0.00",
+            "id": "4412",
+            "firstName": "James",
+            "lastName": "Conway",
+            "address": "83 Elden Station, Herndon, VA",
+            "postal": "19150",
+            "country": "USA",
+            "creationDate": "2014-03-23T08:29:28+0.00",
+            "accountType": "business",
+            "miles": 89220,
+            "transactions": [
+                {
+                    "amount": "9717.0",
+                    "customerRef": "4412",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "EU",
+                    "transactionID": "181948488"
+                },
+                {
+                    "amount": "6368.0",
+                    "customerRef": "4412",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948547"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4419David Jame856132006-07-11T21:00:01+0.00",
+            "id": "4419",
+            "firstName": "David",
+            "lastName": "Jame",
+            "address": "5857 Yonge Street, Vancouver, BC",
+            "postal": "85613",
+            "country": "Canada",
+            "creationDate": "2006-07-11T21:00:01+0.00",
+            "accountType": "business",
+            "miles": 34324,
+            "transactions": [
+                {
+                    "amount": "367.0",
+                    "customerRef": "4419",
+                    "flightID": "UNITEDER9FJE2015-07-11",
+                    "region": "US",
+                    "transactionID": "181948810"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4423Abhi Vi872262006-06-22T07:55:52+0.00",
+            "id": "4423",
+            "firstName": "Abhi",
+            "lastName": "Vi",
+            "address": "494 Slough Street, Slough, Berkshire",
+            "postal": "87226",
+            "country": "United Kingdom",
+            "creationDate": "2006-06-22T07:55:52+0.00",
+            "accountType": "business",
+            "miles": 87557,
+            "transactions": [
+                {
+                    "amount": "9622.0",
+                    "customerRef": "4423",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "US",
+                    "transactionID": "181948703"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4428Mp Burgers433562017-06-26T21:57:21+0.00",
+            "id": "4428",
+            "firstName": "Mp",
+            "lastName": "Burgers",
+            "address": "9999 Mountian Ave, Somerville, New Jersey",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2017-06-26T21:57:21+0.00",
+            "accountType": "business",
+            "miles": 133513,
+            "transactions": [
+                {
+                    "amount": "6621.0",
+                    "customerRef": "4428",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948796"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4434Wendy Crafts581292015-01-07T09:36:45+0.00",
+            "id": "4434",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "12345 Green Rd, Boulder, Colorado",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2015-01-07T09:36:45+0.00",
+            "accountType": "business",
+            "miles": 68031,
+            "transactions": [
+                {
+                    "amount": "7420.0",
+                    "customerRef": "4434",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948667"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4438Tara Connack729842003-01-18T11:23:46+0.00",
+            "id": "4438",
+            "firstName": "Tara",
+            "lastName": "Connack",
+            "address": "9810 Trace Rod Ln, Beograd, Oak",
+            "postal": "72984",
+            "country": "USA",
+            "creationDate": "2003-01-18T11:23:46+0.00",
+            "accountType": "business",
+            "miles": 132065,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4443Brian Burger828212007-09-20T11:43:20+0.00",
+            "id": "4443",
+            "firstName": "Brian",
+            "lastName": "Burger",
+            "address": "123 Apple Street, San Jose, CA",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2007-09-20T11:43:20+0.00",
+            "accountType": "business",
+            "miles": 42690,
+            "transactions": [
+                {
+                    "amount": "275.0",
+                    "customerRef": "4443",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948719"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4448Stu Greaves700472014-05-08T14:32:51+0.00",
+            "id": "4448",
+            "firstName": "Stu",
+            "lastName": "Greaves",
+            "address": "489 Steamer Ave, Indiana, Eerie",
+            "postal": "70047",
+            "country": "Korea",
+            "creationDate": "2014-05-08T14:32:51+0.00",
+            "accountType": "business",
+            "miles": 123360,
+            "transactions": [
+                {
+                    "amount": "6287.0",
+                    "customerRef": "4448",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948770"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4451Kree Krill466742014-09-26T09:33:58+0.00",
+            "id": "4451",
+            "firstName": "Kree",
+            "lastName": "Krill",
+            "address": "777 77Th St Sw, Seattle, WA",
+            "postal": "46674",
+            "country": "USA",
+            "creationDate": "2014-09-26T09:33:58+0.00",
+            "accountType": "business",
+            "miles": 3402,
+            "transactions": [
+                {
+                    "amount": "6108.0",
+                    "customerRef": "4451",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "US",
+                    "transactionID": "181948806"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4460Airy North412252001-03-25T23:40:29+0.00",
+            "id": "4460",
+            "firstName": "Airy",
+            "lastName": "North",
+            "address": "654321 Yellow Rd, Sydney, Eastern",
+            "postal": "41225",
+            "country": "Australia",
+            "creationDate": "2001-03-25T23:40:29+0.00",
+            "accountType": "business",
+            "miles": 70535,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4464Big Jobs Plumbing768812015-10-26T02:39:33+0.00",
+            "id": "4464",
+            "firstName": "Big",
+            "lastName": "Jobs Plumbing",
+            "address": "1234 The Water Way, Hamilton, New York",
+            "postal": "76881",
+            "country": "New Zealand",
+            "creationDate": "2015-10-26T02:39:33+0.00",
+            "accountType": "business",
+            "miles": 115837,
+            "transactions": [
+                {
+                    "amount": "2320.0",
+                    "customerRef": "4464",
+                    "flightID": "UNITEDER95JF2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948711"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4467Sundar Pitchai931542009-05-11T05:34:33+0.00",
+            "id": "4467",
+            "firstName": "Sundar",
+            "lastName": "Pitchai",
+            "address": "948 Penny Ave, Orlando, California",
+            "postal": "93154",
+            "country": "USA",
+            "creationDate": "2009-05-11T05:34:33+0.00",
+            "accountType": "business",
+            "miles": 8519,
+            "transactions": [
+                {
+                    "amount": "2597.0",
+                    "customerRef": "4467",
+                    "flightID": "DELTAA142442015-02-12",
+                    "region": "US",
+                    "transactionID": "181948817"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4470Wendy Crafts856132014-08-26T19:59:23+0.00",
+            "id": "4470",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "12345 Green Rd, Backa Palanka, Auckland",
+            "postal": "85613",
+            "country": "Serbia",
+            "creationDate": "2014-08-26T19:59:23+0.00",
+            "accountType": "business",
+            "miles": 102065,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4476Dole Burgers650482008-03-06T10:03:09+0.00",
+            "id": "4476",
+            "firstName": "Dole",
+            "lastName": "Burgers",
+            "address": "12345 Green Rd, West Nyac, New York",
+            "postal": "65048",
+            "country": "USA",
+            "creationDate": "2008-03-06T10:03:09+0.00",
+            "accountType": "business",
+            "miles": 68959,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4486Jiv Guna588642009-07-18T08:07:00+0.00",
+            "id": "4486",
+            "firstName": "Jiv",
+            "lastName": "Guna",
+            "address": "48219 Victory Ln, Dawn, Ohio",
+            "postal": "58864",
+            "country": "USA",
+            "creationDate": "2009-07-18T08:07:00+0.00",
+            "accountType": "business",
+            "miles": 140902,
+            "transactions": [
+                {
+                    "amount": "8144.0",
+                    "customerRef": "4486",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "EU",
+                    "transactionID": "181948679"
+                },
+                {
+                    "amount": "4377.0",
+                    "customerRef": "4486",
+                    "flightID": "UNITEDER45IF2015-02-11",
+                    "region": "US",
+                    "transactionID": "181948798"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4494Scenic Donkey Rides736112004-08-27T01:14:53+0.00",
+            "id": "4494",
+            "firstName": "Scenic",
+            "lastName": "Donkey Rides",
+            "address": "1 Donkey Way, Hamilton, Waikato",
+            "postal": "73611",
+            "country": "New Zealand",
+            "creationDate": "2004-08-27T01:14:53+0.00",
+            "accountType": "business",
+            "miles": 62284,
+            "transactions": [
+                {
+                    "amount": "6343.0",
+                    "customerRef": "4494",
+                    "flightID": "AMERICANRREE10932016-02-11",
+                    "region": "EU",
+                    "transactionID": "181948576"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4501Zino Davidoff807282009-07-03T12:56:02+0.00",
+            "id": "4501",
+            "firstName": "Zino",
+            "lastName": "Davidoff",
+            "address": "369 Smokey Avenue, New York, Washington",
+            "postal": "80728",
+            "country": "USA",
+            "creationDate": "2009-07-03T12:56:02+0.00",
+            "accountType": "business",
+            "miles": 48305,
+            "transactions": [
+                {
+                    "amount": "6232.0",
+                    "customerRef": "4501",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "EU",
+                    "transactionID": "181948573"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4511Sagar Zope314972001-07-21T23:53:36+0.00",
+            "id": "4511",
+            "firstName": "Sagar",
+            "lastName": "Zope",
+            "address": "1234 Green Rd, Boluder, colorado",
+            "postal": "31497",
+            "country": "USA",
+            "creationDate": "2001-07-21T23:53:36+0.00",
+            "accountType": "business",
+            "miles": 44106,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4516Bac Inc589042017-12-22T11:26:41+0.00",
+            "id": "4516",
+            "firstName": "Bac",
+            "lastName": "Inc",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "6583.0",
+                    "customerRef": "4516",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "US",
+                    "transactionID": "181948638"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4526Terry Li153612013-04-18T05:11:33+0.00",
+            "id": "4526",
+            "firstName": "Terry",
+            "lastName": "Li",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "9683.0",
+                    "customerRef": "4526",
+                    "flightID": "DELTAA1BTT42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948605"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4566Jesus Rivera314972006-02-02T06:22:30+0.00",
+            "id": "4566",
+            "firstName": "Jesus",
+            "lastName": "Rivera",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "2959.0",
+                    "customerRef": "4566",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948515"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4574Ganesh Hospitals828212000-08-23T13:06:36+0.00",
+            "id": "4574",
+            "firstName": "Ganesh",
+            "lastName": "Hospitals",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4589Wendy'S Crafts931542000-08-28T13:20:28+0.00",
+            "id": "4589",
+            "firstName": "Wendy'S",
+            "lastName": "Crafts",
+            "address": "12345 Test Rd, Stillwater, IL",
+            "postal": "93154",
+            "country": "USA",
+            "creationDate": "2000-08-28T13:20:28+0.00",
+            "accountType": "business",
+            "miles": 47609,
+            "transactions": [
+                {
+                    "amount": "689.0",
+                    "customerRef": "4589",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "US",
+                    "transactionID": "181948517"
+                },
+                {
+                    "amount": "8495.0",
+                    "customerRef": "4589",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "EU",
+                    "transactionID": "181948691"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4592Malar Burgler229992014-09-08T16:52:55+0.00",
+            "id": "4592",
+            "firstName": "Malar",
+            "lastName": "Burgler",
+            "address": "181 Grunge Lane, Apeldoorn, TN",
+            "postal": "22999",
+            "country": "India",
+            "creationDate": "2014-09-08T16:52:55+0.00",
+            "accountType": "business",
+            "miles": 83705,
+            "transactions": [
+                {
+                    "amount": "2371.0",
+                    "customerRef": "4592",
+                    "flightID": "AMERICANEEFD01232016-01-25",
+                    "region": "US",
+                    "transactionID": "181948579"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4596Ma Rek520392016-03-23T08:10:39+0.00",
+            "id": "4596",
+            "firstName": "Ma",
+            "lastName": "Rek",
+            "address": "1234 High St, Hyderabad, CA",
+            "postal": "52039",
+            "country": "USA",
+            "creationDate": "2016-03-23T08:10:39+0.00",
+            "accountType": "business",
+            "miles": 31716,
+            "transactions": [
+                {
+                    "amount": "6795.0",
+                    "customerRef": "4596",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948726"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4602Jim Bob'S Burgers615902003-02-23T23:49:09+0.00",
+            "id": "4602",
+            "firstName": "Jim",
+            "lastName": "Bob'S Burgers",
+            "address": "1234 Jims, Stillwater, MN",
+            "postal": "61590",
+            "country": "USA",
+            "creationDate": "2003-02-23T23:49:09+0.00",
+            "accountType": "business",
+            "miles": 110659,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4608Rama Krishna208362002-06-02T03:45:11+0.00",
+            "id": "4608",
+            "firstName": "Rama",
+            "lastName": "Krishna",
+            "address": "New Balaji Nagar, Hyderabad, TG",
+            "postal": "20836",
+            "country": "India",
+            "creationDate": "2002-06-02T03:45:11+0.00",
+            "accountType": "business",
+            "miles": 135218,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4614Delli'S Innsdsd474122008-09-17T02:58:06+0.00",
+            "id": "4614",
+            "firstName": "Delli'S",
+            "lastName": "Innsdsd",
+            "address": "181 Grunge Lane, Apeldoorn, California",
+            "postal": "47412",
+            "country": "USA",
+            "creationDate": "2008-09-17T02:58:06+0.00",
+            "accountType": "business",
+            "miles": 47472,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4617Fred Bloggs295902005-04-14T00:12:02+0.00",
+            "id": "4617",
+            "firstName": "Fred",
+            "lastName": "Bloggs",
+            "address": "123456 Greens Road, Oxford, Colorado",
+            "postal": "29590",
+            "country": "USA",
+            "creationDate": "2005-04-14T00:12:02+0.00",
+            "accountType": "business",
+            "miles": 51231,
+            "transactions": [
+                {
+                    "amount": "8034.0",
+                    "customerRef": "4617",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "US",
+                    "transactionID": "181948608"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4623Wendy Baker680012000-08-21T14:49:21+0.00",
+            "id": "4623",
+            "firstName": "Wendy",
+            "lastName": "Baker",
+            "address": "1234 Red Rd, Apeldoorn, Southland",
+            "postal": "68001",
+            "country": "USA",
+            "creationDate": "2000-08-21T14:49:21+0.00",
+            "accountType": "business",
+            "miles": 16163,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4628Dales Burgers642822003-11-21T00:14:17+0.00",
+            "id": "4628",
+            "firstName": "Dales",
+            "lastName": "Burgers",
+            "address": "1234 Green Rd, Blouder, colorodo",
+            "postal": "64282",
+            "country": "USA",
+            "creationDate": "2003-11-21T00:14:17+0.00",
+            "accountType": "business",
+            "miles": 134600,
+            "transactions": [
+                {
+                    "amount": "9377.0",
+                    "customerRef": "4628",
+                    "flightID": "UNITEDER3KFD2015-08-11",
+                    "region": "US",
+                    "transactionID": "181948561"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4631Blue Maroon700472015-03-06T01:05:17+0.00",
+            "id": "4631",
+            "firstName": "Blue",
+            "lastName": "Maroon",
+            "address": "181 Brief St, Boxerville, Grundy",
+            "postal": "70047",
+            "country": "New Zealand",
+            "creationDate": "2015-03-06T01:05:17+0.00",
+            "accountType": "business",
+            "miles": 8074,
+            "transactions": [
+                {
+                    "amount": "2938.0",
+                    "customerRef": "4631",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948623"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4640Jon Lee292742016-11-24T04:10:20+0.00",
+            "id": "4640",
+            "firstName": "Jon",
+            "lastName": "Lee",
+            "address": "181 Jon Street, Villa, Native",
+            "postal": "29274",
+            "country": "Turkey",
+            "creationDate": "2016-11-24T04:10:20+0.00",
+            "accountType": "business",
+            "miles": 113809,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4734Telangana Nomai474122003-03-09T22:13:10+0.00",
+            "id": "4734",
+            "firstName": "Telangana",
+            "lastName": "Nomai",
+            "address": "982 Cherry Ave, China, Telangana Nomai",
+            "postal": "47412",
+            "country": "India",
+            "creationDate": "2003-03-09T22:13:10+0.00",
+            "accountType": "business",
+            "miles": 69514,
+            "transactions": [],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4488Marthijs Berfelo828212011-04-05T03:32:46+0.00",
+            "id": "4488",
+            "firstName": "Marthijs",
+            "lastName": "Berfelo",
+            "address": "1234-Bellevwe, Seattle, washington",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2011-04-05T03:32:46+0.00",
+            "accountType": "business",
+            "miles": 121882,
+            "transactions": [
+                {
+                    "amount": "4158.0",
+                    "customerRef": "4488",
+                    "flightID": "UNITEDER3KFD2015-08-11",
+                    "region": "US",
+                    "transactionID": "181948455"
+                },
+                {
+                    "amount": "2833.0",
+                    "customerRef": "4488",
+                    "flightID": "AMERICANFFEE01922016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948743"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4507Prashanth Alluri696952001-03-15T23:04:53+0.00",
+            "id": "4507",
+            "firstName": "Prashanth",
+            "lastName": "Alluri",
+            "address": "819 Lockheart, Omr, Tamil Nadu",
+            "postal": "69695",
+            "country": "India",
+            "creationDate": "2001-03-15T23:04:53+0.00",
+            "accountType": "business",
+            "miles": 132368,
+            "transactions": [
+                {
+                    "amount": "8238.0",
+                    "customerRef": "4507",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "US",
+                    "transactionID": "181948659"
+                },
+                {
+                    "amount": "6404.0",
+                    "customerRef": "4507",
+                    "flightID": "UNITEDER3KFD2015-08-11",
+                    "region": "US",
+                    "transactionID": "181948674"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4539Fred Bloggs929622011-04-11T09:19:53+0.00",
+            "id": "4539",
+            "firstName": "Fred",
+            "lastName": "Bloggs",
+            "address": "181 Jon Street, Nama, Singal",
+            "postal": "92962",
+            "country": "Turkey",
+            "creationDate": "2011-04-11T09:19:53+0.00",
+            "accountType": "business",
+            "miles": 113003,
+            "transactions": [
+                {
+                    "amount": "9665.0",
+                    "customerRef": "4539",
+                    "flightID": "DELTAA123422015-07-11",
+                    "region": "EU",
+                    "transactionID": "181948628"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4587Dales Burgers589042011-07-16T03:51:32+0.00",
+            "id": "4587",
+            "firstName": "Dales",
+            "lastName": "Burgers",
+            "address": "1198 Peachtree, Suwanee, GA",
+            "postal": "58904",
+            "country": "USA",
+            "creationDate": "2011-07-16T03:51:32+0.00",
+            "accountType": "business",
+            "miles": 81351,
+            "transactions": [
+                {
+                    "amount": "237.0",
+                    "customerRef": "4587",
+                    "flightID": "UNITEDER04KF2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948483"
+                },
+                {
+                    "amount": "8101.0",
+                    "customerRef": "4587",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "US",
+                    "transactionID": "181948815"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4660Kenny Ge295902010-01-18T10:55:39+0.00",
+            "id": "4660",
+            "firstName": "Kenny",
+            "lastName": "Ge",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "4880.0",
+                    "customerRef": "4660",
+                    "flightID": "DELTAA142442015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948783"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4674Marthijs Berfelo433562008-05-09T05:06:35+0.00",
+            "id": "4674",
+            "firstName": "Marthijs",
+            "lastName": "Berfelo",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "7647.0",
+                    "customerRef": "4674",
+                    "flightID": "UNITEDER45IF2015-02-11",
+                    "region": "US",
+                    "transactionID": "181948462"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4697Dell Inns330652016-09-03T08:52:59+0.00",
+            "id": "4697",
+            "firstName": "Dell",
+            "lastName": "Inns",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "7442.0",
+                    "customerRef": "4697",
+                    "flightID": "DELTAA1B2C32015-03-20",
+                    "region": "EU",
+                    "transactionID": "181948832"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4704Fred Bloggs353922000-07-23T20:26:45+0.00",
+            "id": "4704",
+            "firstName": "Fred",
+            "lastName": "Bloggs",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [
+                {
+                    "amount": "5470.0",
+                    "customerRef": "4704",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948574"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4725Praveen Allurai589042017-12-22T11:26:41+0.00",
+            "id": "4725",
+            "firstName": "Praveen",
+            "lastName": "Allurai",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "595.0",
+                    "customerRef": "4725",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "US",
+                    "transactionID": "181948666"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4741Star Streak153612013-04-18T05:11:33+0.00",
+            "id": "4741",
+            "firstName": "Star",
+            "lastName": "Streak",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "282.0",
+                    "customerRef": "4741",
+                    "flightID": "DELTAAFFFC42015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948747"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4760Marty Martinez314972006-02-02T06:22:30+0.00",
+            "id": "4760",
+            "firstName": "Marty",
+            "lastName": "Martinez",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "839.0",
+                    "customerRef": "4760",
+                    "flightID": "DELTAA1BTT42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948689"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4779Delli'S Innsdsd828212000-08-23T13:06:36+0.00",
+            "id": "4779",
+            "firstName": "Delli'S",
+            "lastName": "Innsdsd",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [
+                {
+                    "amount": "9669.0",
+                    "customerRef": "4779",
+                    "flightID": "AMERICANRREE00012016-01-20",
+                    "region": "EU",
+                    "transactionID": "181948533"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4797Dell Asturt545122015-12-05T08:49:42+0.00",
+            "id": "4797",
+            "firstName": "Dell",
+            "lastName": "Asturt",
+            "address": "123 Hn High Way, Mumbai, maharastha",
+            "postal": "54512",
+            "country": "india",
+            "creationDate": "2015-12-05T08:49:42+0.00",
+            "accountType": "business",
+            "miles": 101847,
+            "transactions": [
+                {
+                    "amount": "9447.0",
+                    "customerRef": "4797",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948621"
+                },
+                {
+                    "amount": "8260.0",
+                    "customerRef": "4797",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "US",
+                    "transactionID": "181948695"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4819Praveen Allurai756022017-01-25T13:49:13+0.00",
+            "id": "4819",
+            "firstName": "Praveen",
+            "lastName": "Allurai",
+            "address": "8 Story Street, Auckland, Auckland",
+            "postal": "75602",
+            "country": "New Zealand",
+            "creationDate": "2017-01-25T13:49:13+0.00",
+            "accountType": "business",
+            "miles": 19197,
+            "transactions": [
+                {
+                    "amount": "5583.0",
+                    "customerRef": "4819",
+                    "flightID": "DELTAA1QWER2015-08-11",
+                    "region": "EU",
+                    "transactionID": "181948522"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4831Star Streak581292005-11-03T12:40:55+0.00",
+            "id": "4831",
+            "firstName": "Star",
+            "lastName": "Streak",
+            "address": "Bakers Colony, Lakeville, TG",
+            "postal": "58129",
+            "country": "USA",
+            "creationDate": "2005-11-03T12:40:55+0.00",
+            "accountType": "business",
+            "miles": 134868,
+            "transactions": [
+                {
+                    "amount": "10063.0",
+                    "customerRef": "4831",
+                    "flightID": "UNITEDER09452015-06-11",
+                    "region": "EU",
+                    "transactionID": "181948648"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4844Spawn Post154902004-02-14T00:03:43+0.00",
+            "id": "4844",
+            "firstName": "Spawn",
+            "lastName": "Post",
+            "address": "918 Main Station, Mx, MN",
+            "postal": "15490",
+            "country": "Mexico",
+            "creationDate": "2004-02-14T00:03:43+0.00",
+            "accountType": "business",
+            "miles": 94814,
+            "transactions": [
+                {
+                    "amount": "7703.0",
+                    "customerRef": "4844",
+                    "flightID": "DELTAA1QWER2015-08-11",
+                    "region": "US",
+                    "transactionID": "181948829"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4854Abhi Vi736112000-07-13T08:27:27+0.00",
+            "id": "4854",
+            "firstName": "Abhi",
+            "lastName": "Vi",
+            "address": "867 Street, New York, Aguascalietnes",
+            "postal": "73611",
+            "country": "Australia",
+            "creationDate": "2000-07-13T08:27:27+0.00",
+            "accountType": "business",
+            "miles": 76389,
+            "transactions": [
+                {
+                    "amount": "5972.0",
+                    "customerRef": "4854",
+                    "flightID": "AMERICANEEFD45112016-01-15",
+                    "region": "US",
+                    "transactionID": "181948554"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4877Anica Faj295902010-01-18T10:55:39+0.00",
+            "id": "4877",
+            "firstName": "Anica",
+            "lastName": "Faj",
+            "address": "1234 Green Street, Melbourne, VIC",
+            "postal": "29590",
+            "country": "Australia",
+            "creationDate": "2010-01-18T10:55:39+0.00",
+            "accountType": "business",
+            "miles": 129088,
+            "transactions": [
+                {
+                    "amount": "8710.0",
+                    "customerRef": "4877",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "US",
+                    "transactionID": "181948634"
+                },
+                {
+                    "amount": "6273.0",
+                    "customerRef": "4877",
+                    "flightID": "DELTAA1B3D42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948718"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4889Tara Connack433562008-05-09T05:06:35+0.00",
+            "id": "4889",
+            "firstName": "Tara",
+            "lastName": "Connack",
+            "address": "123 Main Streer, San Francisco, California",
+            "postal": "43356",
+            "country": "USA",
+            "creationDate": "2008-05-09T05:06:35+0.00",
+            "accountType": "business",
+            "miles": 100665,
+            "transactions": [
+                {
+                    "amount": "2216.0",
+                    "customerRef": "4889",
+                    "flightID": "DELTAA1BTT42015-02-12",
+                    "region": "EU",
+                    "transactionID": "181948709"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4911Kree Krill330652016-09-03T08:52:59+0.00",
+            "id": "4911",
+            "firstName": "Kree",
+            "lastName": "Krill",
+            "address": "1234 High St, Trinty, CA",
+            "postal": "33065",
+            "country": "USA",
+            "creationDate": "2016-09-03T08:52:59+0.00",
+            "accountType": "business",
+            "miles": 114319,
+            "transactions": [
+                {
+                    "amount": "924.0",
+                    "customerRef": "4911",
+                    "flightID": "AMERICANEEFD19942016-01-01",
+                    "region": "EU",
+                    "transactionID": "181948564"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4915Ronald Mcdee353922000-07-23T20:26:45+0.00",
+            "id": "4915",
+            "firstName": "Ronald",
+            "lastName": "Mcdee",
+            "address": "4561 Street, Logan, Red Wing",
+            "postal": "35392",
+            "country": "USA",
+            "creationDate": "2000-07-23T20:26:45+0.00",
+            "accountType": "business",
+            "miles": 22225,
+            "transactions": [
+                {
+                    "amount": "9352.0",
+                    "customerRef": "4915",
+                    "flightID": "UNITEDER49FD2015-02-13",
+                    "region": "EU",
+                    "transactionID": "181948816"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4940Big Jobs Plumbing589042017-12-22T11:26:41+0.00",
+            "id": "4940",
+            "firstName": "Big",
+            "lastName": "Jobs Plumbing",
+            "address": "123 Hn High Way, Hyderabad, Telangana",
+            "postal": "58904",
+            "country": "India",
+            "creationDate": "2017-12-22T11:26:41+0.00",
+            "accountType": "business",
+            "miles": 117380,
+            "transactions": [
+                {
+                    "amount": "4858.0",
+                    "customerRef": "4940",
+                    "flightID": "UNITEDER39RK2015-09-11",
+                    "region": "EU",
+                    "transactionID": "181948740"
+                },
+                {
+                    "amount": "7797.0",
+                    "customerRef": "4940",
+                    "flightID": "DELTAA1FGF42015-02-13",
+                    "region": "US",
+                    "transactionID": "181948827"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4950Dragana Calija153612013-04-18T05:11:33+0.00",
+            "id": "4950",
+            "firstName": "Dragana",
+            "lastName": "Calija",
+            "address": "123 Hn High Way, San Francisco, California",
+            "postal": "15361",
+            "country": "USA",
+            "creationDate": "2013-04-18T05:11:33+0.00",
+            "accountType": "business",
+            "miles": 23474,
+            "transactions": [
+                {
+                    "amount": "5278.0",
+                    "customerRef": "4950",
+                    "flightID": "UNITEDER39RJ2015-02-12",
+                    "region": "US",
+                    "transactionID": "181948680"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4962Wendy Crafts314972006-02-02T06:22:30+0.00",
+            "id": "4962",
+            "firstName": "Wendy",
+            "lastName": "Crafts",
+            "address": "4561 Street, Mx, TN",
+            "postal": "31497",
+            "country": "Mexico",
+            "creationDate": "2006-02-02T06:22:30+0.00",
+            "accountType": "business",
+            "miles": 7586,
+            "transactions": [
+                {
+                    "amount": "3672.0",
+                    "customerRef": "4962",
+                    "flightID": "AMERICANRREE10002016-01-20",
+                    "region": "US",
+                    "transactionID": "181948443"
+                },
+                {
+                    "amount": "3607.0",
+                    "customerRef": "4962",
+                    "flightID": "DELTAA1B2C42015-02-11",
+                    "region": "EU",
+                    "transactionID": "181948650"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        },
+        {
+            "salesID": "4978Jiv Guna828212000-08-23T13:06:36+0.00",
+            "id": "4978",
+            "firstName": "Jiv",
+            "lastName": "Guna",
+            "address": "411 Chromy Rd, Alexandria, IN",
+            "postal": "82821",
+            "country": "USA",
+            "creationDate": "2000-08-23T13:06:36+0.00",
+            "accountType": "business",
+            "miles": 126537,
+            "transactions": [
+                {
+                    "amount": "8037.0",
+                    "customerRef": "4978",
+                    "flightID": "UNITEDER95JF2015-02-20",
+                    "region": "EU",
+                    "transactionID": "181948507"
+                }
+            ],
+            "assignedDirector": "NMA4FJ9K"
+        }
+    ]
+}

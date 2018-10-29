@@ -1,0 +1,21 @@
+{
+    "type": "array",
+    "items": {
+		"type": "object",
+  		"properties": {
+  			"Nombre": {
+  	  			"type": "string"
+  			},
+		    "Horas": {
+		      	"type": "integer"
+		    },
+		    "Anio": {
+		      	"type": "integer"
+		    },
+		    "ID_Materia": {
+  	  			"type": "integer"
+  			}
+		
+		}
+  	}
+}

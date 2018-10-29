@@ -1,0 +1,112 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "flights"
+  ],
+  "properties": {
+    "flights": {
+      "$id": "#/properties/flights",
+      "type": "array",
+      "title": "The Flights Schema",
+      "items": {
+        "$id": "#/properties/flights/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "airlineName",
+          "price",
+          "departureDate",
+          "planeType",
+          "origin",
+          "code",
+          "emptySeats",
+          "destination"
+        ],
+        "properties": {
+          "airlineName": {
+            "$id": "#/properties/flights/items/properties/airlineName",
+            "type": "string",
+            "title": "The Airlinename Schema",
+            "default": "",
+            "examples": [
+              "United"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "price": {
+            "$id": "#/properties/flights/items/properties/price",
+            "type": "integer",
+            "title": "The Price Schema",
+            "default": 0,
+            "examples": [
+              400
+            ]
+          },
+          "departureDate": {
+            "$id": "#/properties/flights/items/properties/departureDate",
+            "type": "string",
+            "title": "The Departuredate Schema",
+            "default": "",
+            "examples": [
+              "2015/03/20"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "planeType": {
+            "$id": "#/properties/flights/items/properties/planeType",
+            "type": "string",
+            "title": "The Planetype Schema",
+            "default": "",
+            "examples": [
+              "Boeing 737"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "origin": {
+            "$id": "#/properties/flights/items/properties/origin",
+            "type": "string",
+            "title": "The Origin Schema",
+            "default": "",
+            "examples": [
+              "MUA"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "code": {
+            "$id": "#/properties/flights/items/properties/code",
+            "type": "string",
+            "title": "The Code Schema",
+            "default": "",
+            "examples": [
+              "ER38sd"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "emptySeats": {
+            "$id": "#/properties/flights/items/properties/emptySeats",
+            "type": "integer",
+            "title": "The Emptyseats Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "destination": {
+            "$id": "#/properties/flights/items/properties/destination",
+            "type": "string",
+            "title": "The Destination Schema",
+            "default": "",
+            "examples": [
+              "SFO"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

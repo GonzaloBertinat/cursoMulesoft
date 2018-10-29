@@ -1,0 +1,95 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd">
+    <http:listener-config name="MiAPI-httpListenerConfig" host="localhost" port="8082" doc:name="HTTP Listener Configuration"/>
+    <apikit:config name="MiAPI-config" raml="MiAPI.raml" consoleEnabled="false" doc:name="Router"/>
+    <file:connector name="File1" writeToDirectory="${path}" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+    <smtp:gmail-connector name="Gmail" fromAddress="snoopbfprueba@gmail.com" subject="Pruebas Mule 3" validateConnections="true" doc:name="Gmail"/>
+    <flow name="MiAPI-main">
+        <http:listener config-ref="MiAPI-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <apikit:router config-ref="MiAPI-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="MiAPI-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="MiAPI-console">
+        <http:listener config-ref="MiAPI-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <apikit:console config-ref="MiAPI-config" doc:name="APIkit Console"/>
+    </flow>
+
+    <apikit:mapping-exception-strategy name="MiAPI-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+    <flow name="post:/miApi/insertarDatos/nuevaMateria:MiAPI-config">
+        <set-property propertyName="Property" value="#[&quot;Hola&quot;]" doc:name="Property"/>
+        <json:json-to-object-transformer returnClass="java.lang.Object" doc:name="JSON to Object" metadata:id="b35ba03e-3d0c-4cc6-82fb-ea72cb9d30f9"/>
+        <set-variable variableName="Materia" value="#[payload]" doc:name="Variable"/>
+        <db:insert config-ref="Generic_Database_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO Test.dbo.Materias VALUES (
+#[payload.ID_Materia],
+#[payload.Nombre],
+#[payload.Anio],
+#[payload.Horas]
+)]]></db:parameterized-query>
+        </db:insert>
+        <choice doc:name="Choice">
+            <when expression="#[payload == 1]">
+                <dw:transform-message doc:name="Transform Message">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	"ID_Materia": flowVars.Materia.ID_Materia,
+	"Anio": flowVars.Materia.Anio,
+	"Horas": flowVars.Materia.Horas,
+	"Nombre": flowVars.Materia.Nombre
+}]]></dw:set-payload>
+                </dw:transform-message>
+                <file:outbound-endpoint path="${path}" outputPattern="Registro.txt" responseTimeout="10000" mimeType="application/json" doc:name="File"/>
+                <set-payload value="Se agreg&#243; la materia a la base de datos satisfactoriamente y se registr&#243; en ${path}" doc:name="Set Payload"/>
+                <logger message="Se agreg&#243; la materia a la base de datos satisfactoriamente y se registr&#243; en ${path}" level="INFO" doc:name="Logger"/>
+                <smtp:outbound-endpoint host="smtp.gmail.com" user="snoopbfprueba@gmail.com" password="Snoop2018" to="snoopbfprueba@gmail.com" from="snoopbfprueba@gmail.com" subject="Pruebas Mule 3" responseTimeout="10000" doc:name="SMTP"/>
+            </when>
+            <otherwise>
+                <set-payload value="ERROR al copiar a la base de datos." doc:name="Set Payload"/>
+            </otherwise>
+        </choice>
+    </flow>
+    <flow name="get:/miApi/obtenerDatos/todaLaTabla:MiAPI-config">
+        <db:select config-ref="Generic_Database_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[SELECT * FROM Test.dbo.Materias;]]></db:parameterized-query>
+        </db:select>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </flow>
+</mule>
+ -->

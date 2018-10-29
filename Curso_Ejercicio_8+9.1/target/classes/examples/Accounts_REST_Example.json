@@ -1,0 +1,26 @@
+[
+    {
+        "salesID": "4400Mat Siva824332017-10-21T22:54:36+0.00",
+        "id": "4400",
+        "firstName": "Mat",
+        "lastName": "Siva",
+        "address": "12345 Green, Boulder, Colorado",
+        "postal": "82433",
+        "country": "USA",
+        "creationDate": "2017-10-21T22:54:36+0.00",
+        "accountType": "business",
+        "miles": 119093
+    },
+    {
+        "salesID": "4411Arjun Dale725322006-03-04T19:53:05+0.00",
+        "id": "4411",
+        "firstName": "Arjun",
+        "lastName": "Dale",
+        "address": "Capthorne Avenue, London, Harrow",
+        "postal": "72532",
+        "country": "United Kingdom",
+        "creationDate": "2006-03-04T19:53:05+0.00",
+        "accountType": "business",
+        "miles": 126689
+    }
+]

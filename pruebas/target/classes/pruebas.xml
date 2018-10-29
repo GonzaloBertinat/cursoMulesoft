@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:vm="http://www.mulesoft.org/schema/mule/vm"
+	xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
+  <!--   <db:generic-config name="Generic_Database_Configuration" url="jdbc:sqlserver://${db.ip};user=${db.user};password=${db.password};" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" doc:name="Generic Database Configuration"/> -->
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081"  doc:name="HTTP Listener Configuration"/>
+    <spring:beans>
+        <spring:bean id="Bean" name="Test_Class" class="pruebas.Test_Class"/>
+    </spring:beans>
+    <flow name="filter_Test">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/filter" allowedMethods="POST" doc:name="HTTP"/>
+        <json:json-to-object-transformer mimeType="application/json" doc:name="JSON to Object"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <foreach collection="#[payload]" doc:name="For Each">
+            <expression-filter expression="#[payload.cantidad &gt; 100]" doc:name="Expression"/>
+            <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        </foreach>
+    </flow>
+    <!-- <flow name="SELECT_A_Base_Con_QueryParam">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/get" allowedMethods="GET" doc:name="HTTP"/>
+        <message-properties-transformer doc:name="Message Properties">
+            <add-message-property key="ID_Curso" value="#[message.inboundProperties.'http.query.params'.ID]"/>
+        </message-properties-transformer>
+        <db:select config-ref="Generic_Database_Configuration" doc:name="Database">
+            <db:dynamic-query><![CDATA[SELECT * FROM Test.dbo.Cursos WHERE ID_Curso = #[message.outboundProperties.ID_Curso]]]></db:dynamic-query>
+        </db:select>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </flow> -->
+    <flow name="pruebasFlow1">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/sarasa" doc:name="HTTP"/>
+        <set-variable variableName="Variable" value="#['Pepito']" doc:name="Variable"/>
+        <set-session-variable variableName="asdasd" value="#['Hola']" doc:name="Session Variable"/>
+        <vm:outbound-endpoint exchange-pattern="request-response" path="asd" doc:name="VM"/>
+    </flow>
+    <flow name="pruebasFlow">
+        <vm:inbound-endpoint exchange-pattern="request-response" path="asd" doc:name="VM"/>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="Test_Expression">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/expression" allowedMethods="GET" doc:name="HTTP"/>
+        <expression-component doc:name="Expression"><![CDATA[#[payload = 4 == 5]]]></expression-component>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <set-payload value="#[payload]" doc:name="Set Payload"/>
+    </flow>
+    <sub-flow name="pruebasSub_Flow">
+        <invoke name="defaultName" object-ref="Test_Class" method="testMethod" methodArguments="#[message.outboundProperties.value]" doc:name="defaultName"/>
+        <logger message="RESULTADO = #[payload]" level="INFO" doc:name="Logger"/>
+    </sub-flow>
+    <flow name="Invocar_Metodo_Java">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/javaTest" allowedMethods="GET" doc:name="HTTP"/>
+        <message-properties-transformer doc:name="Message Properties">
+            <add-message-property key="value" value="#[message.inboundProperties.'http.query.params'.ID]"/>
+        </message-properties-transformer>
+        <flow-ref name="pruebasSub_Flow" doc:name="Flow Reference"/>
+    </flow>
+    <flow name="Scatter_Gather_Test">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/scatter" doc:name="HTTP"/>
+        <scatter-gather doc:name="Scatter-Gather">
+            <logger message="ANDA EL CAMINO 1" level="INFO" doc:name="Logger"/>
+            <logger message="ANDA EL CAMINO 2" level="INFO" doc:name="Logger"/>
+        </scatter-gather>
+        <set-payload value="#['Esto es una porqueria']" doc:name="Set Payload"/>
+    </flow>
+    <flow name="INSERT_Base">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/insert" allowedMethods="POST" doc:name="HTTP" metadata:id="56c8b46c-cd58-4d7e-be44-adb0a6eddef3"/>
+        <json:json-to-object-transformer returnClass="java.lang.Object" doc:name="JSON to Object"/>
+        <db:insert config-ref="Generic_Database_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO Test.dbo.Materias VALUES
+(
+	
+
+);]]></db:parameterized-query>
+        </db:insert>
+        <set-property propertyName="tiempo" value="#[server.dateTime]" doc:name="Prueba_Property_DataTime"/>
+        <set-session-variable variableName="variableDos" value="#[a]" doc:name="Declaro_SessionVariable"/>
+        
+        <logger message="PROBANDO MULE" doc:name="Logger" />
+        
+ 
+
+
+    </flow>
+    
+   
+    
+    
+    
+    
+    
+</mule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd">
+    <flow name="MealsNGo_WriteToFTP_Flow">
+        <set-variable variableName="expiration" value="#[server.dateTime.plusMonths(3)]" doc:name="Variable"/>
+        <dw:transform-message doc:name="Prepare CSV File" metadata:id="ef920869-187a-4022-8518-26f26e19372c">
+            <dw:input-payload doc:sample="sample_data\list_VisaCard_MaG.dwl" mimeType="application/java"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	gd_card_number: payload01.card_no,
+	gc_balance: payload01.amount_granted as :string,
+	origin: "MULEBANK-0949",
+	card_type: "VISA",
+	expiration: flowVars.expiration as :string
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <ftp:outbound-endpoint host="${partner2.ftp.host}" port="${partner2.ftp.port}" path="${partner2.ftp.root}" user="${partner2.ftp.username}" password="${partner2.ftp.password}" passive="true" outputPattern="MULEBANK-gc-#[flowVars.datetime.timeInMillis].csv" responseTimeout="10000" doc:name="FTP"/>
+    </flow>
+</mule>

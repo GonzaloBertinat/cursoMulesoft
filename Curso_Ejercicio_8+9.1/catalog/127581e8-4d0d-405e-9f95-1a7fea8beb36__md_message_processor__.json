@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "SOAP_Transactions"
+        }
+    },
+    "id": "127581e8-4d0d-405e-9f95-1a7fea8beb36",
+    "version": "5.2.0.0"
+}

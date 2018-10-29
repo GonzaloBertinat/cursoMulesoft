@@ -1,0 +1,122 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "items": {
+    "$id": "http://example.com/example.json/items",
+    "type": "object",
+    "properties": {
+      "ID": {
+        "$id": "http://example.com/example.json/items/properties/ID",
+        "type": "integer",
+        "title": "The Id Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1
+        ]
+      },
+      "code": {
+        "$id": "http://example.com/example.json/items/properties/code",
+        "type": "string",
+        "title": "The Code Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "rree0001"
+        ]
+      },
+      "PRICE-NOW": {
+        "$id": "http://example.com/example.json/items/properties/price",
+        "type": "integer",
+        "title": "The Price Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          541
+        ]
+      },
+      "departureDate": {
+        "$id": "http://example.com/example.json/items/properties/departureDate",
+        "type": "string",
+        "title": "The Departuredate Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "2016-01-20T00:00:00"
+        ]
+      },
+      "origin": {
+        "$id": "http://example.com/example.json/items/properties/origin",
+        "type": "string",
+        "title": "The Origin Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "MUA"
+        ]
+      },
+      "destination": {
+        "$id": "http://example.com/example.json/items/properties/destination",
+        "type": "string",
+        "title": "The Destination Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "LAX"
+        ]
+      },
+      "emptySeats": {
+        "$id": "http://example.com/example.json/items/properties/emptySeats",
+        "type": "integer",
+        "title": "The Emptyseats Schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          0
+        ]
+      },
+      "plane": {
+        "$id": "http://example.com/example.json/items/properties/plane",
+        "type": "object",
+        "properties": {
+          "type": {
+            "$id": "http://example.com/example.json/items/properties/plane/properties/type",
+            "type": "string",
+            "title": "The Type Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Boeing 787"
+            ]
+          },
+          "totalSeats": {
+            "$id": "http://example.com/example.json/items/properties/plane/properties/totalSeats",
+            "type": "integer",
+            "title": "The Totalseats Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              200
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "totalSeats"
+        ]
+      }
+    },
+    "required": [
+      "ID",
+      "code",
+      "PRICE-NOW",
+      "departureDate",
+      "origin",
+      "destination",
+      "emptySeats",
+      "plane"
+    ]
+  }
+}

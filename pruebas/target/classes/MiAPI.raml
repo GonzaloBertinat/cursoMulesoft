@@ -1,0 +1,29 @@
+#%RAML 0.8
+title: Sample API
+
+schemas:
+  - listaAlumnos: !include ./schemas/listaMaterias_schema.json
+  - materia: !include ./schemas/materia_schema.json
+  
+/miApi:
+  /obtenerDatos:
+    /todaLaTabla:
+      get:
+        description: "Trae toda la informacion de una tabla en una base de datos"
+        responses:
+          200:
+            body:
+              application/json:
+                schema: listaAlumnos
+                example: !include ./examples/listaMaterias_example.json
+               
+  /insertarDatos:
+    /nuevaMateria:
+      post:
+        description: "Agrega una materia a la base datos"
+        responses:
+          200:
+            body:
+              applicaton/json:
+                schema: materia
+                example: !include ./examples/materia_example.json             

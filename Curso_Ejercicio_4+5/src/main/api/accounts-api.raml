@@ -1,0 +1,122 @@
+#%RAML 1.0
+version: v1
+title: Accounts API
+
+types:
+  Account: !include types/account.raml
+  AccountNoID: !include types/accountNoID.raml
+  
+/accounts:
+  get:
+    description: Get accounts
+    headers: 
+      Requester-ID:
+        type: string
+        description: Needed to identify the person making account requests
+    
+    queryParameters: 
+      type:
+        enum: 
+          - personal
+          - business
+        required: true
+      name:
+        type: string
+        required: false
+      country:
+        type: string
+        required: false
+    responses: 
+      400:
+        body: 
+          application/json:
+            example: {"message":"Error trying to get accounts"}
+      200:
+        body: 
+          application/json:
+            type: Account[]
+            example: !include examples/accountsExample.raml
+      
+
+  post:
+    description: Add new accounts
+    body: 
+      application/json:
+        type: AccountNoID[]
+        example: !include examples/accountsNoIDExample.raml
+    responses: 
+      400:
+        body: 
+          application/json:
+            example: {"message":"Error trying to create accounts"}
+      201:
+        body: 
+          application/json:
+            example: {"message":"Account created (but not really)"}
+            
+  /{id}:
+    uriParameters:
+      id:
+        type: string
+        description: Account ID
+    get:
+      description: Get one account by ID
+      queryParameters: 
+        type:
+          enum: 
+            - personal
+            - business
+          required: false
+      responses:
+        400:
+          body: 
+            application/json:
+              example: {"message":"Error trying to get the account"}
+        200:
+          body:
+            application/json: 
+              type: Account
+              example: !include examples/accountExample.raml
+    put:
+      description: Replace an account by ID
+      body:
+        application/json: 
+          type: AccountNoID
+          example: !include examples/accountNoIDExample.raml
+      responses:
+        400:
+          body: 
+            application/json:
+              example: {"message":"Error trying to replace an account"}
+        200:
+          body: 
+            application/json:
+              example: {"message":"Account replaced (but not really)"}  
+    patch:
+      description: Modify an account by ID
+      body:
+        application/json: 
+          type: AccountNoID
+          example: !include examples/accountNoIDExample.raml
+      responses:
+        400:
+          body: 
+            application/json:
+              example: {"message":"Error trying to modify an account"}
+        200:
+          body: 
+            application/json: 
+              example: {"message":"Account modified (but not really)"}
+    delete:
+       description: Delete an account by ID
+       responses:
+        400:
+          body: 
+            application/json:
+              example: {"message":"Error trying to delete an account"}
+        200:
+          body: 
+            application/json: 
+              example: {"message":"Account deleted (but not really)"}     
+    
+        

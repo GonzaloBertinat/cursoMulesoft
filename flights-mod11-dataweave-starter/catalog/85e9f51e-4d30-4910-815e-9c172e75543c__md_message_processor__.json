@@ -1,0 +1,28 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "transactionsResult": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "Transaction_Pojo_List"
+            },
+            "accountsResult": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "Account_Pojo_List"
+            },
+            "flightsResult": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "Flight_Pojo_List"
+            }
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "dataType": "UNKNOWN",
+            "metaDataModelPropertiesManager": {
+                "properties": []
+            }
+        }
+    },
+    "id": "85e9f51e-4d30-4910-815e-9c172e75543c",
+    "version": "5.2.0.0"
+}

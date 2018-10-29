@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:GetTransactionsforFlightsResponse xmlns:ns0="http://training.mulesoft.com/">
+  <transaction>
+            <amount>4139.0</amount>
+            <customerRef>4414</customerRef>
+            <flightID>UNITEDER9FJE2015-07-11</flightID>
+            <region>EU</region>
+            <transactionID>181948774</transactionID>
+         </transaction>
+         <transaction>
+            <amount>5738.0</amount>
+            <customerRef>4416</customerRef>
+            <flightID>AMERICANEEFD01232016-01-25</flightID>
+            <region>US</region>
+            <transactionID>181948758</transactionID>
+         </transaction>
+         <transaction>
+            <amount>8660.0</amount>
+            <customerRef>4417</customerRef>
+            <flightID>AMERICANFFEE11122016-01-20</flightID>
+            <region>EU</region>
+            <transactionID>181948705</transactionID>
+         </transaction>
+         <transaction>
+            <amount>367.0</amount>
+            <customerRef>4419</customerRef>
+            <flightID>UNITEDER9FJE2015-07-11</flightID>
+            <region>US</region>
+            <transactionID>181948810</transactionID>
+         </transaction>
+
+</ns0:GetTransactionsforFlightsResponse>

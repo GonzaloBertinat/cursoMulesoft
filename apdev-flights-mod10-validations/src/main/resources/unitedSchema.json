@@ -1,0 +1,111 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "flights": {
+      "$id": "/properties/flights",
+      "type": "array",
+      "items": {
+        "$id": "/properties/flights/items",
+        "type": "object",
+        "properties": {
+          "code": {
+            "$id": "/properties/flights/items/properties/code",
+            "type": "string",
+            "title": "The Code Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "ER45if"
+            ]
+          },
+          "price": {
+            "$id": "/properties/flights/items/properties/price",
+            "type": "number",
+            "title": "The Price Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              345.989990234375
+            ]
+          },
+          "origin": {
+            "$id": "/properties/flights/items/properties/origin",
+            "type": "string",
+            "title": "The Origin Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "MUA"
+            ]
+          },
+          "destination": {
+            "$id": "/properties/flights/items/properties/destination",
+            "type": "string",
+            "title": "The Destination Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "LAX"
+            ]
+          },
+          "departureDate": {
+            "$id": "/properties/flights/items/properties/departureDate",
+            "type": "string",
+            "title": "The Departuredate Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "2015/02/11"
+            ]
+          },
+          "planeType": {
+            "$id": "/properties/flights/items/properties/planeType",
+            "type": "string",
+            "title": "The Planetype Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Boeing 737"
+            ]
+          },
+          "airlineName": {
+            "$id": "/properties/flights/items/properties/airlineName",
+            "type": "string",
+            "title": "The Airlinename Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "United"
+            ]
+          },
+          "emptySeats": {
+            "$id": "/properties/flights/items/properties/emptySeats",
+            "type": "integer",
+            "title": "The Emptyseats Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              52
+            ]
+          }
+        },
+        "required": [
+          "code",
+          "price",
+          "origin",
+          "destination",
+          "departureDate",
+          "planeType",
+          "airlineName",
+          "emptySeats"
+        ]
+      }
+    }
+  },
+  "required": [
+    "flights"
+  ]
+}

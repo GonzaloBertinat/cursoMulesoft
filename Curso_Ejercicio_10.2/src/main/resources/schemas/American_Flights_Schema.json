@@ -1,0 +1,121 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "ID",
+      "code",
+      "price-BAD",
+      "departureDate",
+      "origin",
+      "destination",
+      "emptySeats",
+      "plane"
+    ],
+    "properties": {
+      "ID": {
+        "$id": "#/items/properties/ID",
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0,
+        "examples": [
+          2
+        ]
+      },
+      "code": {
+        "$id": "#/items/properties/code",
+        "type": "string",
+        "title": "The Code Schema",
+        "default": "",
+        "examples": [
+          "eefd0123"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "price": {
+        "$id": "#/items/properties/price",
+        "type": "integer",
+        "title": "The Price Schema",
+        "default": 0,
+        "examples": [
+          300
+        ]
+      },
+      "departureDate": {
+        "$id": "#/items/properties/departureDate",
+        "type": "string",
+        "title": "The Departuredate Schema",
+        "default": "",
+        "examples": [
+          "2016-01-25T00:00:00"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "origin": {
+        "$id": "#/items/properties/origin",
+        "type": "string",
+        "title": "The Origin Schema",
+        "default": "",
+        "examples": [
+          "MUA"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "destination": {
+        "$id": "#/items/properties/destination",
+        "type": "string",
+        "title": "The Destination Schema",
+        "default": "",
+        "examples": [
+          "CLE"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "emptySeats": {
+        "$id": "#/items/properties/emptySeats",
+        "type": "integer",
+        "title": "The Emptyseats Schema",
+        "default": 0,
+        "examples": [
+          7
+        ]
+      },
+      "plane": {
+        "$id": "#/items/properties/plane",
+        "type": "object",
+        "title": "The Plane Schema",
+        "required": [
+          "type",
+          "totalSeats"
+        ],
+        "properties": {
+          "type": {
+            "$id": "#/items/properties/plane/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "Boeing 747"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "totalSeats": {
+            "$id": "#/items/properties/plane/properties/totalSeats",
+            "type": "integer",
+            "title": "The Totalseats Schema",
+            "default": 0,
+            "examples": [
+              345
+            ]
+          }
+        }
+      }
+    }
+  }
+}

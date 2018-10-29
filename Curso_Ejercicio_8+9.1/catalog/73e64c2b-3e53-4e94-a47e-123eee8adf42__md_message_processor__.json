@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "REST_Accounts"
+        }
+    },
+    "id": "73e64c2b-3e53-4e94-a47e-123eee8adf42",
+    "version": "5.2.0.0"
+}

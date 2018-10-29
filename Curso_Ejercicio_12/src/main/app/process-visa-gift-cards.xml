@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+    <flow name="processVisaGiftCardsFlow">
+        <file:inbound-endpoint path="${master.fileIn}" moveToDirectory="${master.fileProcessed}" responseTimeout="10000" doc:name="Read CSV Files">
+            <file:filename-regex-filter pattern=".*csv" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <dw:transform-message doc:name="CSV to Object" metadata:id="f89df857-392d-41e0-b635-55d8c6d8150d">
+            <dw:input-payload doc:sample="filebatch-AK494SD.csv" mimeType="application/csv"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload]]></dw:set-payload>
+            <dw:set-variable variableName="datetime"><![CDATA[%dw 1.0
+%output application/java
+---
+now as :datetime]]></dw:set-variable>
+        </dw:transform-message>
+        <set-variable variableName="count" value="#[payload.size()]" doc:name="Set Count"/>
+        <set-variable variableName="partner" value="#[payload[0].partner]" doc:name="Set Partner"/>
+        <choice doc:name="Choice">
+            <when expression="#[flowVars.partner == &quot;${partner1.name}&quot;]">
+                <flow-ref name="FoodNSavings_InsertInDatabase_Flow" doc:name="FoodNSavings_InsertInDatabase_Flow"/>
+            </when>
+            <when expression="#[flowVars.partner == &quot;${partner2.name}&quot;]">
+                <flow-ref name="MealsNGo_WriteToFTP_Flow" doc:name="MealsNGo_WriteToFTP_Flow"/>
+            </when>
+            <when expression="#[flowVars.partner == &quot;${partner3.name}&quot;]">
+                <flow-ref name="OnlineRetailPlus_sendToJMS_Flow" doc:name="OnlineRetailPlus_sendToJMS_Flow"/>
+            </when>
+            <otherwise>
+                <logger message="CSV Incorrecto" level="INFO" doc:name="Ac&#225; no deber&#237;a llegar nunca!"/>
+            </otherwise>
+        </choice>
+    </flow>
+    
+   
+
+
+</mule>

@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: Transfer Accounts API
+
+types: 
+  Message: !include datatypes/Message.raml
+  
+/transferAccounts:
+  get:
+    queryParameters:
+      type:
+        type: string
+        required: true
+        enum: [business, personal]
+      name:
+        type: string
+        required: false
+        example: Gonza
+      country:
+        type: string
+        required: false
+        example: Argentina
+        
+    responses:
+      200:
+        body:
+          application/json:
+            type: Message
+            example: !include examples/MessageExample.raml

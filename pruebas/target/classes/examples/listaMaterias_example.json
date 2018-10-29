@@ -1,0 +1,44 @@
+[
+    {
+        "Nombre": "Análisis Matemático I",
+        "Horas": 5,
+        "Anio": 1,
+        "ID_Materia": 1
+    },
+    {
+        "Nombre": "Álgebra y Geometría Analítica",
+        "Horas": 5,
+        "Anio": 1,
+        "ID_Materia": 2
+    },
+    {
+        "Nombre": "Química",
+        "Horas": 5,
+        "Anio": 1,
+        "ID_Materia": 3
+    },
+    {
+        "Nombre": "Ingeniería y Sociedad",
+        "Horas": 5,
+        "Anio": 1,
+        "ID_Materia": 4
+    },
+    {
+        "Nombre": "Arquitectura de Computadoras",
+        "Horas": 3,
+        "Anio": 1,
+        "ID_Materia": 6
+    },
+    {
+        "Nombre": "Matemática Discreta",
+        "Horas": 3,
+        "Anio": 1,
+        "ID_Materia": 7
+    },
+    {
+        "Nombre": "Sistemas y Organizaciones",
+        "Horas": 3,
+        "Anio": 1,
+        "ID_Materia": 8
+    }
+]

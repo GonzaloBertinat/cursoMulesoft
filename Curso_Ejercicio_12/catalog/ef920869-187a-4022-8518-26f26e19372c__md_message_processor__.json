@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "VISA_CARD_MaG_Java_List"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {}
+    },
+    "id": "ef920869-187a-4022-8518-26f26e19372c",
+    "version": "5.2.0.0"
+}

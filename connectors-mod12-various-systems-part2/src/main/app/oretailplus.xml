@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <flow name="oretailplusFlow">
+        <jms:inbound-endpoint queue="${partner3.queue}" connector-ref="Active_MQ" doc:name="JMS" exchange-pattern="request-response"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <set-variable variableName="recordCount" value="#[payload.size()]" doc:name="Set recordCount"/>
+        <dw:transform-message doc:name="Convert to CSV">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+---
+payload]]></dw:set-payload>
+        </dw:transform-message>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <file:outbound-endpoint path="${partner3.fileWrite}" outputPattern="MULEBANK-#[server.dateTime.toXMLCalendar().toGregorianCalendar().getTimeInMillis()]-#[flowVars.recordCount].csv" responseTimeout="10000" doc:name="File"/>
+        <set-property propertyName="jmsStatusMessage" value="SUCCESS" doc:name="Set Success Status"/>
+        <catch-exception-strategy doc:name="Catch Exception Strategy">
+            <set-property propertyName="jmsStatusMessage" value="ERROR OCCURRED WHILE PROCESSING: #[message.exception]" doc:name="Property"/>
+        </catch-exception-strategy>
+    </flow>
+</mule>

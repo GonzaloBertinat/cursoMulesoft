@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+	<http:listener-config name="HTTP_TEST_Configuration" host="0.0.0.0" port="9091" doc:name="HTTP_TEST_Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration" host="0.0.0.0" port="${http.port}" basePath="/api" doc:name="HTTP Request Configuration"/>
+    
+    <flow name="testGETALLAccounts">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testGetALLAccounts" allowedMethods="GET" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="type" value="${test.type}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="testPOSTAccounts">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testPostAccounts" allowedMethods="GET" doc:name="HTTP"/>
+        <set-payload value="[
+  {
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;Smith&quot;,
+    &quot;address&quot;: &quot;1002 Main Street, Springfield TX&quot;,
+    &quot;postal&quot;: &quot;77002&quot;,
+    &quot;country&quot;: &quot;USA&quot;,
+    &quot;accountType&quot;: &quot;personal&quot;,
+    &quot;miles&quot;: 8492
+  }
+]" doc:name="Set Payload" mimeType="application/json"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts" method="POST" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="type" value="${test.type}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    <flow name="testGETOneAccount">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testGetOneAccount" allowedMethods="GET" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="${test.id}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    
+    <flow name="testPUTOneAccount">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testPutOneAccount" allowedMethods="GET" doc:name="HTTP"/>
+         <set-payload value="
+  {
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;Smith&quot;,
+    &quot;address&quot;: &quot;1002 Main Street, Springfield TX&quot;,
+    &quot;postal&quot;: &quot;77002&quot;,
+    &quot;country&quot;: &quot;USA&quot;,
+    &quot;accountType&quot;: &quot;personal&quot;,
+    &quot;miles&quot;: 8492
+  }
+" doc:name="Set Payload" mimeType="application/json"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="PUT" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="${test.id}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+       
+    <flow name="testPATCHOneAccount">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testPatchOneAccount" allowedMethods="GET" doc:name="HTTP"/>
+         <set-payload value="
+  {
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;Smith&quot;,
+    &quot;address&quot;: &quot;1002 Main Street, Springfield TX&quot;,
+    &quot;postal&quot;: &quot;77002&quot;,
+    &quot;country&quot;: &quot;USA&quot;,
+    &quot;accountType&quot;: &quot;personal&quot;,
+    &quot;miles&quot;: 8492
+  }
+" doc:name="Set Payload" mimeType="application/json"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="PATCH" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="${test.id}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+    
+    <flow name="testDELETEOneAccount">
+        <http:listener config-ref="HTTP_TEST_Configuration" path="/testDeleteOneAccount" allowedMethods="GET" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/accounts/{id}" method="DELETE" doc:name="HTTP">
+            <http:request-builder>
+                <http:uri-param paramName="id" value="${test.id}"/>
+                <http:header headerName="Requester-ID" value="${test.requestid}"/>
+            </http:request-builder>
+        </http:request>
+    </flow>
+
+
+
+
+
+
+
+</mule>

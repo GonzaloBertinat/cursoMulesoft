@@ -1,0 +1,17 @@
+{
+	"type": "object",
+	"properties":{
+		"ID_Materia": {
+			"type": "integer"
+			},
+		"Nombre": {
+			"type": "string"
+			},
+		"Anio": {
+			"type":"integer"
+			},
+		"Horas": {
+			"type":"integer"
+			}		
+	}
+}

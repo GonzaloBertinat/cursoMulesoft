@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+    <flow name="processAccountsTransactionsFlow">
+        <validation:is-not-empty value="#[payload]" doc:name="Validation"/>
+        <flow-ref name="getAccountsFlow" doc:name="Flow Reference"/>
+        <flow-ref name="getTransactionsFlow" doc:name="Flow Reference"/>
+        <http:request config-ref="Accounts_HTTP_Request_Configuration" path="/accounts_transactions" method="POST" doc:name="Post Accounts And Transactions"/>
+        <set-payload value="#['Accounts records proceseds: ' + flowVars.accounts.size()]" doc:name="Set Final Message"/>
+        <choice-exception-strategy doc:name="Choice Exception Strategy">
+            <catch-exception-strategy when="#[exception.causedBy('com.mulesoft.weave.*')]" doc:name="DataWeave Exceptions">
+                <set-property propertyName="http.status" value="500" doc:name="Property"/>
+                <set-payload value="Error processing data." doc:name="Set Payload"/>
+            </catch-exception-strategy>
+            <catch-exception-strategy doc:name="All other exceptions">
+                <set-property propertyName="http.status" value="500" doc:name="Property"/>
+                <set-payload value="Empty Payload" doc:name="Set Payload"/>
+            </catch-exception-strategy>
+        </choice-exception-strategy>
+    </flow>
+    <flow name="getAccountsFlow">
+        <http:request config-ref="Accounts_HTTP_Request_Configuration" path="/accounts" method="GET" doc:name="Get Accounts Request" metadata:id="73e64c2b-3e53-4e94-a47e-123eee8adf42">
+            <http:request-builder>
+                <http:query-param paramName="type" value="#[flowVars.accountType]"/>
+                <http:header headerName="Requester-ID" value="${accounts.requesterID}"/>
+            </http:request-builder>
+        </http:request>
+        <dw:transform-message doc:name="Prepare Payload and Save Accounts">
+            <dw:input-payload doc:sample="sample_data\list_json.json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://training.mulesoft.com/
+---
+{
+	ns0#GetTransactionsforCustomers: {
+		(payload map ((payload01 , indexOfPayload01) -> {
+			customerID: payload01.id
+		}))
+	}
+}]]></dw:set-payload>
+            <dw:set-variable variableName="accounts"><![CDATA[%dw 1.0
+%output application/json
+---
+payload]]></dw:set-variable>
+        </dw:transform-message>
+    </flow>
+    <sub-flow name="getTransactionsFlow">
+        <ws:consumer config-ref="Web_Service_Consumer" operation="GetTransactionsforCustomers" doc:name="Get Transactions Request"/>
+        <dw:transform-message doc:name="Combine Accounts with Transactions" metadata:id="127581e8-4d0d-405e-9f95-1a7fea8beb36">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+%namespace ns0 http://training.mulesoft.com/
+---
+{
+	accounts: flowVars.accounts,
+	transactions:
+		payload.ns0#GetTransactionsforCustomersResponse.*transaction map ((transaction , indexOfTransaction) -> {
+			amount: transaction.amount as :string,
+			customerRef: transaction.customerRef,
+			flightID: transaction.flightID,
+			region: transaction.region,
+			transactionID: transaction.transactionID
+		})
+
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <dw:transform-message doc:name="Consolidate Accounts with Transactions" metadata:id="b0472637-4d65-43b0-bda1-0bea38a6dedc">
+            <dw:set-payload><![CDATA[%dw 1.0
+
+%output application/java
+
+%var directorIDs = ["JKLS483S","FJSA48JD","NMA4FJ9K"]
+
+ 
+
+//Combines Accounts and Transactions by the Account ID. Assigns each account //to a director
+
+%function consolidateAccountsTrans (payload)
+
+  payload.accounts map ( (account, index) ->
+
+  using (id = account.id as :string)
+
+  (
+
+    account ++
+
+    {
+
+      transactions: payload.transactions filter ($.customerRef == id)
+
+    } ++
+
+    {
+
+      assignedDirector: directorIDs[index mod sizeOf directorIDs]
+
+    }
+
+  )
+
+)
+
+---
+
+using (data = consolidateAccountsTrans(payload))
+
+(data groupBy $.assignedDirector)]]></dw:set-payload>
+        </dw:transform-message>
+    </sub-flow>
+
+</mule>

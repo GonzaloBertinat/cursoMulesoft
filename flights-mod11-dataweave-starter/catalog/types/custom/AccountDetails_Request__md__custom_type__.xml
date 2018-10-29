@@ -1,0 +1,34 @@
+<custom__type__definition>
+  <version>5.2.0.0</version>
+  <typeName class="org.mule.common.metadata.DefaultMetaDataKey">
+    <id>AccountDetails_Request</id>
+    <displayName>AccountDetails_Request</displayName>
+    <category>DEFAULT</category>
+    <metaDataKeyPropertiesManager>
+      <properties>
+        <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+      </properties>
+    </metaDataKeyPropertiesManager>
+  </typeName>
+  <metadataModel class="org.mule.common.metadata.DefaultListMetaDataModel">
+    <dataType>LIST</dataType>
+    <metaDataModelPropertiesManager>
+      <properties>
+        <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+          <exampleContent>C:\Users\Gonzalo\AnypointStudio\workspace\flights-mod11-dataweave-starter\src\main\resources\accountDetails_Request_Example.json</exampleContent>
+        </org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+        <org.mule.tooling.metadata.properties.DefinitionEditorModeType>
+          <mode>EXAMPLE</mode>
+          <path>src\main\resources\accountDetails_Request_Example.json</path>
+        </org.mule.tooling.metadata.properties.DefinitionEditorModeType>
+      </properties>
+    </metaDataModelPropertiesManager>
+    <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+      <dataType>STRING</dataType>
+      <metaDataModelPropertiesManager>
+        <properties/>
+      </metaDataModelPropertiesManager>
+    </model>
+    <isArray>false</isArray>
+  </metadataModel>
+</custom__type__definition>

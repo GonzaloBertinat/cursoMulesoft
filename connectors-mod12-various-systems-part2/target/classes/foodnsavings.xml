@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:jms="http://www.mulesoft.org/schema/mule/jms"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">    <flow name="FoodnSavingsFlow">
+        <jms:inbound-endpoint queue="${partner1.queue}" connector-ref="Active_MQ" doc:name="JMS" exchange-pattern="request-response"/>
+        <!-- Assumes that the payload is a byte-array -->
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <choice doc:name="Choice">
+            <when expression="#['${env}'  == 'prod']">
+                <db:insert config-ref="PostGres_Database_Configuration" doc:name="INSERT INTO Giftcard DB">
+                    <db:parameterized-query><![CDATA[INSERT INTO Giftcards (number, sourceID, balance, createdOn) VALUES
+(#[payload.number], #[payload.sourceID], #[payload.balance], #[payload.createdOn])]]></db:parameterized-query>
+                </db:insert>
+            </when>
+            <otherwise>
+                <db:insert config-ref="Derby_Database_Configuration" bulkMode="true" doc:name="INSERT into Giftcard TEST DB">
+                    <db:parameterized-query><![CDATA[INSERT INTO Giftcards (number, sourceID, balance, createdOn) VALUES
+(#[payload.number], #[payload.sourceID], #[payload.balance], #[payload.createdOn])]]></db:parameterized-query>
+                </db:insert>
+            </otherwise>
+        </choice>
+        <set-property propertyName="jmsStatusMessage" value="SUCCESS" doc:name="Set Success Status"/>
+        <catch-exception-strategy doc:name="Catch Exception Strategy">
+            <set-property propertyName="jmsStatusMessage" value="ERROR OCCURRED WHILE PROCESSING: #[message.exception]" doc:name="Property"/>
+        </catch-exception-strategy>
+        
+    </flow>
+    
+</mule>
